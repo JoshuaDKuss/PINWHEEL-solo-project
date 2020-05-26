@@ -1,0 +1,36 @@
+.container{
+    /* background-image: url(pwRed.jpg);
+    background-size: 50%; */
+    /* opacity: 82%; */
+  }
+
+body{
+    margin: 10px;
+    /* color: orange; */
+    background-image: url(pwRed.jpg);
+    background-size: 100%;
+    text-align: center;
+    font-family: 'Verdana', serif;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+    transition: 0.3s;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(161, 197, 219);
+    margin: 11px;
+    text-align: center;
+    opacity: 55%;
+    
+  }
+
+  /* .card:hover {
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6);
+    background-color: rgb(155, 235, 201);
+  } */
+
+  .container {
+    padding: 2px 16px;
+  }
