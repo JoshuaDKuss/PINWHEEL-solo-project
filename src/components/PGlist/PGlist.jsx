@@ -1,31 +1,43 @@
 import React, { Component } from 'react';
-//import { connect } from 'react-redux';
-//import './PGlist.css';
-//import '../Details/Details';
+import { connect } from 'react-redux';
+import './PgList.css';
+import '../Details/Details';
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
 // It doesn't dispatch any redux actions or display any part of redux state
 // or even care what the redux state is, so it doesn't need 'connect()'
 
-// const PGlist = () => (
-{/* <p>Playground listings in your area</p> */}
+// const PgList = () => (
 
-class PGlist extends Component {
-
-// handleClick = () => {
-//     console.log(this.props.playground);
-//     this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});
-//     this.props.history.push('/details');
-// }
+class PgList extends Component {
+    
+handleClick = () => {
+    console.log(this.props.playground);
+    this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});
+    this.props.history.push('/details');
+}
 
 render() {
+    
     return (
       <>
-      <input placeholder="SEARCH"></input>
-        {/* <div className="card">
-            <div className="container"> */}
-            {/* <div className='item1'>{this.props.movie.title}</div><br/><br/> */}
+      {/* <input placeholder=""></input><button>SEARCH</button> */}
+      <select name="filter-results" id="filter-results">
+      <option value="kiddie">Filter results</option>
+      <option value="kiddie">Kiddie-friendly</option>
+      <option value="restrooms">Public restrooms</option>
+      <option value="pond">Pond access</option>
+      <option value="basketball">Basketball court</option>
+      <option value="tennis">Tennis court</option>
+      <option value="field">Baseball field / Open field</option>
+      </select>
+    
+        <div className="card">
+            <div className="container">
+            {/* <div className="pgName">{this.props.playground.pg_name.id}</div> */}
+            {/* <br/><br/> */}
+            <p>{JSON.stringify(this.props.playground.id)}</p>
             {/* <img className="item3" alt = "movie-poster" onClick={this.handleClick} src = {this.props.movie.poster}/> */}
 
 
@@ -33,8 +45,8 @@ render() {
             {/* <div className="item2">{this.props.movie.description}</div> */}
             {/* {this.props.reduxState.genres.map(genre => {return <div className="item4">{genre.name}</div>})}<br /> */}
             {/* <p>{JSON.stringify(this.props.reduxState.genres.name, null, 2)}</p> */}
-            {/* </div>
-        </div> */}
+            </div>
+        </div>
         </>
     ) // end return
 } // end render
@@ -43,8 +55,8 @@ render() {
 
 
 
-export default PGlist;
+//export default PgList;
 
-// const putReduxStateOnProps = (reduxState) => ( { reduxState } )
+const mapStateToProps = (reduxState) => ( { reduxState } )
 
-// export default connect(putReduxStateOnProps)(PGlist);
+export default connect(mapStateToProps)(PgList);

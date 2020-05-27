@@ -5,6 +5,10 @@ body {
     /* text-align: center; */
 }
 
+#log-button{
+  background-color: orange;
+}
+
 body{
   margin: 7px;
   /* color: orange; */
@@ -18,6 +22,26 @@ body{
     background-image: url(pg1.jpg);
     background-size: cover;
   } */
+
+  .card {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+    transition: 0.3s;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(161, 197, 219);
+    margin: 11px;
+    text-align: center;
+    opacity: 75%;
+  }
+
+  .card:hover {
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+    background-color: rgb(203, 248, 229);
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
 
 .alert {
     background-color: #ff4545;

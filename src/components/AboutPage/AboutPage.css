@@ -7,10 +7,25 @@
 body{
     margin: 10px;
     /* color: orange; */
-    background-image: url(pwRed.jpg);
+    /* background-image: url(pwRed.jpg); */
     background-size: 100%;
     text-align: center;
     font-family: 'Verdana', serif;
+    text-decoration: double;
+}
+
+#logo{
+  animation: App-logo-spin infinite 0.4s linear;
+  height: 45vmin;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 .card {
@@ -22,14 +37,14 @@ body{
     background-color: rgb(161, 197, 219);
     margin: 11px;
     text-align: center;
-    opacity: 55%;
+    opacity: 75%;
     
   }
 
-  /* .card:hover {
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6);
-    background-color: rgb(155, 235, 201);
-  } */
+  .card:hover {
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+    background-color: rgb(203, 248, 229);
+  }
 
   .container {
     padding: 2px 16px;

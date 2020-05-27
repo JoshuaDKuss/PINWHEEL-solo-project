@@ -24,13 +24,13 @@ class Details extends Component {
                     <div className='pgName'>{this.props.playground.name}</div>  
                     {/* reduxState */}
 
-                    <img className="pgPic" value={this.props.playground.id} alt="playground-photo"
+                    <img className="pgPic" value={this.props.playground.id} alt="playground"
                     // reduxState
                         src={this.props.playground.img_url} />
 
-                    <div className="item2">{this.props.reduxState.movie.description}</div>
-                    {this.props.reduxState.genres.map(genre => {return <div className="item4">{genre.name}</div>}
-                    )}<br />
+                    <div className="item2">{this.props.reduxState.playground.description}</div>
+                    {/* {this.props.reduxState.genres.map(genre => {return <div className="item4">{genre.name}</div>} */}
+                    {/* )}<br /> */}
                     
                 </div>
                 {/* <p>{JSON.stringify(this.props.reduxState.genres.name, null, 2)}</p> */}
@@ -39,7 +39,8 @@ class Details extends Component {
     } // end render
 } // end component
 
-export default Details;
-// const putReduxStateOnProps = (reduxState) => ({ reduxState })
 
-// export default connect(putReduxStateOnProps)(Details);
+export default Details;
+// const mapStateToProps = (reduxState) => ({ reduxState })
+
+// export default connect(mapStateToProps)(Details);

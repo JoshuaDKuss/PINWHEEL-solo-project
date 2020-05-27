@@ -24,8 +24,8 @@ CREATE TABLE "playground" (
 
 CREATE TABLE "favorites" (
     "id" SERIAL PRIMARY KEY,
-    "user_faves" INT,
-    "pg_id" INT
+    "user_id" INT, --faves
+    "playground_id" INT
 );
 
 INSERT INTO "playground" ("name", "address", "img_url", "description", "kiddie_friendly")

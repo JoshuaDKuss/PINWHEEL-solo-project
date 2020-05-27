@@ -3,9 +3,9 @@ body {
 }
 .grid-container {
     display: grid;
-    
 }
-.item1 {
+
+.pgName {
     font-size: 18px;
     font-weight: bold;
     margin-top: 15px;
@@ -24,7 +24,7 @@ body {
     font-size: medium;
 }
 
-.item3 {
+.pgPic {
     margin-top: -30px;
 }
 
