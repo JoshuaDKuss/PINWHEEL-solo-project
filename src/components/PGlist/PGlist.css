@@ -1,0 +1,65 @@
+body {
+    margin: 20px;
+}
+.grid-container {
+    display: grid;
+    
+}
+.item1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 10px;
+    /* font-size: 22px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 200px; */
+}
+
+.item2{
+    width: 70%;
+    max-height: 140px;
+    margin-left: 210px;
+    margin-top: -230px;
+    font-size: medium;
+}
+
+.item3 {
+    margin-top: -30px;
+}
+
+.item4 {
+    margin-left: 10px;
+    margin-top: 110px;
+    /* margin-bottom: 2px; */
+    float: left;
+    /* margin-left: 40px;
+    margin-top: 100px;
+    margin-bottom: 2px; */
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+    transition: 0.3s;
+    width: 250px;
+    border-radius: 5px;
+    background-color: rgb(161, 197, 219);
+    margin: 11px;
+    float: left;
+    
+  }
+
+  .card:hover {
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.6);
+    background-color: rgb(155, 235, 201);
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
+
+  img {
+    border-radius: 5px 5px 5px 5px;
+    margin: 6px;
+  }
