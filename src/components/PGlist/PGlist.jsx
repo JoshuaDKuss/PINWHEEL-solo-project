@@ -7,10 +7,21 @@ import './PgList.css';
 // It doesn't have local state, so it can be a function component.
 // It doesn't dispatch any redux actions or display any part of redux state
 // or even care what the redux state is, so it doesn't need 'connect()'
-
 // const PgList = () => (
 
 class PgList extends Component {
+
+    componentDidMount(){
+        console.log('CDM PgList');
+        this.getPlaygrounds();
+        // const action = {type: 'FETCH_PG'}; //SET, FETCH
+        // this.props.dispatch(action); // dispatch
+    }
+    getPlaygrounds(){
+        this.props.dispatch({ type: 'FETCH_PG'});
+    }
+
+
     
 // handleClick = () => {
 //     console.log(this.props.playground);
@@ -38,9 +49,10 @@ render() {
             {/* <div className="pgName">{this.props.playground.id}</div>  */}
             {/* .pg_name.id */}
             {/* <br/><br/> */}
-            <p>{JSON.stringify(this.props.reduxState.playground)}</p> 
+            <p>{JSON.stringify(this.props.reduxState)}</p> 
             {/* .reduxState.playground  */}
-            <p>hello</p>
+            
+            <br/><p>hello</p>
             {/* <img className="item3" alt = "movie-poster" onClick={this.handleClick} src = {this.props.movie.poster}/> */}
 
 

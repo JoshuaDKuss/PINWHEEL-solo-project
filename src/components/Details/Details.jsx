@@ -21,7 +21,7 @@ class Details extends Component {
 
                 <br />
                 <div className="grid-container">
-                    <div className='pgName'>{this.props.playground.name}</div>  
+                    <div className='pgName'>{this.props.playground.pg_name}</div>  
                     {/* reduxState */}
 
                     <img className="pgPic" value={this.props.playground.id} alt="playground"

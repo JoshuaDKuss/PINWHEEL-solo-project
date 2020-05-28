@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 
 class Edit extends Component {
     state = {
-        title: '',
         description: ''
-        // genres: ''
     }
 
     handleClick = () => {
@@ -15,10 +13,10 @@ class Edit extends Component {
         this.props.history.push('/');
     }
 
-    handleTitleChange = (event) => {
-        console.log(this.state.title);
-        this.setState({ title: event.target.value })
-    }
+    // handleDescChange = (event) => {
+    //     console.log(this.state.description);
+    //     this.setState({ title: event.target.value })
+    // }
 
     handleDescriptionChange = (event) => {
         console.log(this.state.description);
@@ -32,7 +30,7 @@ class Edit extends Component {
     render() {
         return (
             <div>
-                <input onChange={this.handleTitleChange} value={this.state.title} placeholder="movie title"></input><br />
+                <input onChange={this.handleDescChange} value={this.state.description} placeholder="playground description"></input><br />
                 <textarea onChange={this.handleDescriptionChange} value={this.state.description} placeholder="description"></textarea>
                 <input onClick={this.handleClick} type="submit"></input>
                 <button onClick={this.handleCancelClick}>Cancel</button>
