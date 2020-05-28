@@ -45,8 +45,8 @@ render() {
       </select>
     
         <div className="card">
-            <div className="container">
-            {/* <div className="pgName">{this.props.playground.id}</div>  */}
+            {/* <div className="container"> */}
+            {/* <div className="pgName">{this.props.reduxState.playground}</div>  */}
             {/* .pg_name.id */}
             {/* <br/><br/> */}
             <p>{JSON.stringify(this.props.reduxState)}</p> 
@@ -60,7 +60,7 @@ render() {
             {/* <div className="item2">{this.props.movie.description}</div> */}
             {/* {this.props.reduxState.genres.map(genre => {return <div className="item4">{genre.name}</div>})}<br /> */}
             {/* <p>{JSON.stringify(this.props.reduxState.genres.name, null, 2)}</p> */}
-            </div>
+            {/* </div> */}
         </div>
         </>
     ) // end return

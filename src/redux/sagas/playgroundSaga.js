@@ -23,7 +23,7 @@ function* fetchPlayground() {
 
 
 function* playgroundSaga() {
-  yield takeLatest('SET_PG', fetchPlayground); //CHRIS helped //FETCH, set
+  yield takeLatest('FETCH_PG', fetchPlayground); //CHRIS helped //FETCH, set
   
 }
 
