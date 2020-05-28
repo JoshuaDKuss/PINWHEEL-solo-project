@@ -5,8 +5,9 @@ const router = express.Router();
 /**
  * GET route template
  */
-router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM playground ORDER BY "id"`;
+router.get('/info', (req, res) => {  // /playground, /api/info
+    console.log('pg router get');
+    const queryText = `SELECT * FROM playground ORDER BY "id";`;  //;
     pool.query(queryText)
         .then((result) => {
             res.send(result.rows);

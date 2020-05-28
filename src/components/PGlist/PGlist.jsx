@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './PgList.css';
-import '../Details/Details';
+//import '../Details/Details';
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
@@ -12,11 +12,11 @@ import '../Details/Details';
 
 class PgList extends Component {
     
-handleClick = () => {
-    console.log(this.props.playground);
-    this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});
-    this.props.history.push('/details');
-}
+// handleClick = () => {
+//     console.log(this.props.playground);
+//     this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});
+//     this.props.history.push('/details');
+// }
 
 render() {
     
@@ -35,9 +35,12 @@ render() {
     
         <div className="card">
             <div className="container">
-            {/* <div className="pgName">{this.props.playground.pg_name.id}</div> */}
+            {/* <div className="pgName">{this.props.playground.id}</div>  */}
+            {/* .pg_name.id */}
             {/* <br/><br/> */}
-            <p>{JSON.stringify(this.props.playground.id)}</p>
+            <p>{JSON.stringify(this.props.reduxState.playground)}</p> 
+            {/* .reduxState.playground  */}
+            <p>hello</p>
             {/* <img className="item3" alt = "movie-poster" onClick={this.handleClick} src = {this.props.movie.poster}/> */}
 
 
@@ -56,7 +59,7 @@ render() {
 
 
 //export default PgList;
-
+//                      playground          reduxState.playground
 const mapStateToProps = (reduxState) => ( { reduxState } )
 
 export default connect(mapStateToProps)(PgList);

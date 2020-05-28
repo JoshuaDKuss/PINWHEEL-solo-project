@@ -22,6 +22,7 @@ import './App.css';
 class App extends Component {
   componentDidMount () {
     this.props.dispatch({type: 'FETCH_USER'})
+    this.props.dispatch({type: 'FETCH_PG'})  //
   }
 
   render() {
@@ -54,6 +55,7 @@ class App extends Component {
               exact
               path="/info"
               component={PgList}
+                // /api/info
             />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />

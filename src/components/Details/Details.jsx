@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+//import React, { Component } from 'react';
 //import { connect } from 'react-redux';
 
 
@@ -40,7 +40,7 @@ class Details extends Component {
 } // end component
 
 
-export default Details;
-// const mapStateToProps = (reduxState) => ({ reduxState })
+// export default Details;
+const mapStateToProps = (reduxState) => ({ reduxState })
 
-// export default connect(mapStateToProps)(Details);
+export default connect(mapStateToProps)(Details);

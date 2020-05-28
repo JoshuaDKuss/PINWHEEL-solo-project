@@ -21,6 +21,7 @@ const Nav = (props) => (
       {props.user.id && (
         <>
           <Link className="nav-link" to="/info">
+                                      {/* /api/info */}
             Playgrounds
           </Link>
           <LogOutButton className="nav-link"/>
