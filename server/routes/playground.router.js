@@ -20,8 +20,8 @@ router.get('/', (req, res) => {  // just / according to Chris
 
 // router.put('/', (req, res) => {
 //     //console.log('router put', req.body);
-//     const queryText = `UPDATE "playground" SET "title"= $2, "description"= $3 WHERE "id"=$1`;
-//     const queryValues = [req.body.id, req.body.title, req.body.description];
+//     const queryText = `UPDATE "playground" SET "description"= $4 WHERE "id"=$1`;
+//     const queryValues = [req.body.id, req.body.description];
 //     pool.query(queryText, queryValues)
 //         .then(() => {
 //             res.sendStatus(200);

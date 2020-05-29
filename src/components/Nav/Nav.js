@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import LogOutButton from '../LogOutButton/LogOutButton';
+//import LogOutButton from '../LogOutButton/LogOutButton';
 import './Nav.css';
 
 const Nav = (props) => (
   <div className="nav">
     <Link to="/home">
     {/* <Link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'></Link> */}
-      <h2 className="nav-title">P I N W H E E L</h2>
+      <h1 className="nav-title">P I N W H E E L</h1>
     </Link>
     <div className="nav-right"><br/><br/>
       <Link className="nav-link" to="/home">
@@ -24,7 +24,7 @@ const Nav = (props) => (
                                       {/* /api/info */}
             Playgrounds
           </Link>
-          <LogOutButton className="nav-link"/>
+          {/* <LogOutButton className="nav-link"/> */}
         </>
       )}
       {/* Always show this link since the about page is not protected */}

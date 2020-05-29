@@ -3,6 +3,14 @@ footer {
     color: orangered;
     text-align: left;
     font-size: x-small;
-    opacity: 82%;
+    /* opacity: 92%; */
     /* float: bottom; */
 }
+
+.log-in{
+    float: right;
+}
+
+button:hover {
+    background-color: rgb(251, 125, 79);
+  }

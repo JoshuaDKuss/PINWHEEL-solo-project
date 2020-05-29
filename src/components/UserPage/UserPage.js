@@ -1,17 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import LogOutButton from '../LogOutButton/LogOutButton';
+//import LogOutButton from '../LogOutButton/LogOutButton';
+// import Logo from './logo.png';
 
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (
 // and then instead of `props.user.username` you could use `user.username`
 const UserPage = (props) => (
   <div>
-    <h1 id="welcome">
+    <h2 id="welcome">
       Hello, { props.user.username }!
-    </h1>
-    <p>Your ID is: {props.user.id}</p>
-    <LogOutButton className="log-in" />
+    </h2><br/>
+
+    {/* <img src={Logo} alt="logo"/> */}
+    
+
+    <p>Your ID is: {props.user.id}</p><br/>
+
+    {/* <LogOutButton className="log-in" /> */}
   </div>
 );
 
