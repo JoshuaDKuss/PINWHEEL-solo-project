@@ -21,9 +21,18 @@ function* fetchPlayground() {
   }
 }
 
+function* postPlayground(action) {
+  try {
+      yield axios.post('/info', action.payload);
+      yield put ({type: 'GET_PG'});
+  } catch (error) {
+      console.log('PG post request failed', error);
+  }
+}
+
 function* playgroundSaga() {
   yield takeLatest('FETCH_PG', fetchPlayground); 
-  
+  yield takeLatest('ADD_PG', postPlayground); //
 }
 
 export default playgroundSaga;
