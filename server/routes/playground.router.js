@@ -37,18 +37,18 @@ router.get('/', (req, res) => {  // just / according to Chris
 /**
  * POST route template
  */
-router.post('/', (req, res) => {
-    console.log('pg router post');
-    const queryText = `INSERT INTO "playground" ("description") VALUES ($1);`;
-    const values = [req.body.description];
-    pool.query(queryText, values)
-    .then((response)=>{
-        res.sendStatus(201)
-    })
-    .catch((error)=>{
-        console.log('Error POSTING to the DB', error);
-        res.sendStatus(500);
-    })
-});
+// router.post('/', (req, res) => {
+//     console.log('pg router post');
+//     const queryText = `INSERT INTO "playground" ("description") VALUES ($1);`;
+//     const values = [req.body.description];
+//     pool.query(queryText, values)
+//     .then((response)=>{
+//         res.sendStatus(201)
+//     })
+//     .catch((error)=>{
+//         console.log('Error POSTING to the DB', error);
+//         res.sendStatus(500);
+//     })
+// });
 
 module.exports = router;

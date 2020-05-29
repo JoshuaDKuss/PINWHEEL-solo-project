@@ -1,19 +1,36 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+//import Details from './Details/Details';
 
 class PgListCards extends Component {
 
-    handleClick = () => {
-        console.log(this.props.park);
-        this.props.dispatch({ type: 'PG_DETAIL', payload: this.props.park });
-        this.props.history.push('/details');
+    componentDidMount() {
+        const action = { type: 'GET_PG' };
+        this.props.dispatch(action);
     }
+
+    // handleClick = () => {
+    //     console.log(this.props.playground);
+    //     this.props.dispatch({ type: 'PG_DETAIL', payload: this.props.playground });
+    //     this.props.history.push('/details');
+    // }
 
     render() {
         return (
             <div className="card">
-                <p>{JSON.stringify(this.props.reduxState)}</p>
-                {/* <div className="pgName">{this.props.park.pg_name}</div><br /> */}
+                {/* <p>{JSON.stringify(this.props.reduxState)}</p> */}
+                <h4>YO</h4>
+                <ul>
+                                                        
+                {this.props.reduxState.playgroundReducer.map(playground =>
+                    <li key={playground.id}>
+                        <p>{playground.description}</p>
+                        {/* <img src={playground.img_url} alt={playground.description} /> */}
+                    </li> ) }
+                {/* <button onClick <Details /> >edit</button> */}
+                </ul>
+
+                {/* <div className="pgName">{this.props.playground.pg_name}</div><br /> */}
 
 
 
