@@ -1,4 +1,4 @@
-const playgroundReducer = (state = {}, action) => {
+const playgroundReducer = (state = [], action) => {
     switch (action.type) {
       case 'SET_PG':
         return action.payload;
