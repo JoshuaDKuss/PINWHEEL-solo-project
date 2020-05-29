@@ -1,5 +1,5 @@
-//import React, { Component } from 'react';
-//import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 
 class Details extends Component {
@@ -14,14 +14,14 @@ class Details extends Component {
         })
     }
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        this.props.dispatch({type: 'ADD_PG', payload: this.state});
-        this.setState({
-            description: '',
-            image_url: ''
-        })
-    }
+    // handleSubmit = (event) => {     // pgSaga
+    //     event.preventDefault();
+    //     this.props.dispatch({type: 'ADD_PG', payload: this.state});
+    //     this.setState({
+    //         description: '',
+    //         image_url: ''
+    //     })
+    // }
 
     handleBackClick = () => {
         this.props.history.push('/');

@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+//import React, { Component } from 'react';
+//import { connect } from 'react-redux';
 //import Details from './Details/Details';
 
-class PgListCards extends Component {
+// class PgListCards extends Component {
 
-    componentDidMount() {
-        const action = { type: 'GET_PG' };
-        this.props.dispatch(action);
-    }
+    // componentDidMount() {
+        
+    // }
 
     // handleClick = () => {
     //     console.log(this.props.playground);
@@ -19,16 +18,18 @@ class PgListCards extends Component {
         return (
             <div className="card">
                 {/* <p>{JSON.stringify(this.props.reduxState)}</p> */}
-                <h4>YO</h4>
+                {/* <h4>YO</h4> */}
                 <ul>
-                                                        
-                {this.props.reduxState.playgroundReducer.map(playground =>
+                        /////////////////                                
+                {/* {this.props.reduxState.playgroundReducer.map(playground =>
                     <li key={playground.id}>
-                        <p>{playground.description}</p>
+                        <p>{playground.description}</p> */}
                         {/* <img src={playground.img_url} alt={playground.description} /> */}
-                    </li> ) }
+                    {/* </li> ) } */}
+                        ///////////
                 {/* <button onClick <Details /> >edit</button> */}
                 </ul>
+
 
                 {/* <div className="pgName">{this.props.playground.pg_name}</div><br /> */}
 
@@ -47,10 +48,10 @@ class PgListCards extends Component {
             </div>
         );
     }
-}
+// }
 
 
 // export default PgListCards;
-const mapStateToProps = (reduxState) => ({ reduxState })
+// const mapStateToProps = (reduxState) => ({ reduxState })
 
-export default connect(mapStateToProps)(PgListCards);
+// export default connect(mapStateToProps)(PgListCards);
