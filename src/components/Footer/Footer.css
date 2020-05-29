@@ -9,8 +9,13 @@ footer {
 
 .log-in{
     float: right;
+    
 }
 
-button:hover {
+/* button{
+    background-color: orangered;
+} */
+
+/* button:hover {
     background-color: rgb(251, 125, 79);
-  }
+  } */

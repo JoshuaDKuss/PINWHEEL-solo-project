@@ -8,12 +8,12 @@ function* fetchPlayground() {
     // allow the server session to recognize the user
     // If a user is logged in, this will return their information
     // from the server session (req.user)
-    const response = yield axios.get('/info'); // /api /info  /api/playground
+    const response = yield axios.get('/info'); //
     console.log(response);
     // now that the session has given us a user object
     // with an id and username set the client-side user object to let
     // the client-side code know the user is logged in
-    yield put({ type: 'SET_PG', payload: response.data });  // FETCH
+    yield put({ type: 'SET_PG', payload: response.data });  
     //yield put(fetchPlayground(action));
     console.log(response);
   } catch (error) {
@@ -22,7 +22,7 @@ function* fetchPlayground() {
 }
 
 function* playgroundSaga() {
-  yield takeLatest('FETCH_PG', fetchPlayground); //CHRIS helped //FETCH, set
+  yield takeLatest('FETCH_PG', fetchPlayground); 
   
 }
 

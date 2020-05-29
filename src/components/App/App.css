@@ -6,7 +6,11 @@ body {
 }
 
 #log-button{
-  background-color: orange;
+  background-color: orangered;
+}
+
+#log-button:hover {
+  background-color: rgb(247, 119, 73);
 }
 
 body{

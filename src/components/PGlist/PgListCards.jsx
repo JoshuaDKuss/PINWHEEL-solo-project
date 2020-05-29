@@ -13,7 +13,9 @@ class PgListCards extends Component {
         return (
             <div className="card">
                 <p>{JSON.stringify(this.props.reduxState)}</p>
-                <div className="pgName">{this.props.park.pg_name}</div><br />
+                {/* <div className="pgName">{this.props.park.pg_name}</div><br /> */}
+
+
 
 
                 {/* .reduxState.playground  */}

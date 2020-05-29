@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './PgList.css';
 //import '../Details/Details';
 import PgListCards from './PgListCards';
-//import PgListSearch from './PgListSearch';
+import PgListSearch from './PgListSearch';
 
 
 class PgList extends Component {
@@ -15,7 +15,7 @@ class PgList extends Component {
         // this.props.dispatch(action); // dispatch
     }
     getPlaygrounds(){
-        this.props.dispatch({ type: 'FETCH_PG'});
+        this.props.dispatch( { type: 'FETCH_PG'} );
     }
 
 
@@ -23,15 +23,14 @@ render() {
     
     return (
       <div>
-        {/* <PgListSearch /> */}
-       
-        {/* {this.props.reduxState.movies.map( movie => { */}
-        {/* return <MovieList movie={ movie } history={this.props.history} key={movie.id} /> } ) } */}
+        <PgListSearch />
+        {/* <p>{JSON.stringify(this.props.reduxState)}</p> */}
         
-        {this.props.reduxState.playground.map( park => {
-        return <PgListCards park={ park } history={this.props.history} key={park.id} /> } ) }
+        
+        {/* {this.props.reduxState.playground.map( park => { */}
+        {/* return <PgListCards park={ park } history={this.props.history} key={park.id} /> } ) } */}
 
-        {/* <PgListCards /> */}
+        <PgListCards />
 
       </div>
     ) // end return

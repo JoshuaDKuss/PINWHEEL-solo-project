@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 //import LogOutButton from '../LogOutButton/LogOutButton';
-// import Logo from './logo.png';
+//import Logo from './public/images/logo.png';
 
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (
@@ -12,7 +12,7 @@ const UserPage = (props) => (
       Hello, { props.user.username }!
     </h2><br/>
 
-    {/* <img src={Logo} alt="logo"/> */}
+    {/* <img src={Logo} alt="logo"></img> */}
     
 
     <p>Your ID is: {props.user.id}</p><br/>
