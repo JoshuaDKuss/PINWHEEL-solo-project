@@ -8,53 +8,46 @@ import PgListSearch from './PgListSearch';
 
 class PgList extends Component {
 
-    componentDidMount(){
-        console.log('PgList props:', this.props);
-        //this.getPlaygrounds();
-        // const action = {type: 'FETCH_PG'}; //SET, FETCH
+  componentDidMount() {
+    console.log('PgList props:', this.props);
+    this.props.dispatch({ type: 'FETCH_PG' });
+  }
 
-        // this.props.dispatch(action); // dispatch
-        //const action = { type: 'GET_PG' };
-        this.props.dispatch( { type: 'FETCH_PG' } );
-    }
+  handleClick = (event) => {
+    console.log('in HC', event.target.id);
+  } //new route, query
 
-    // getPlaygrounds(){
-    //     this.props.dispatch( { type: 'FETCH_PG'} );
-    // }
+  handleImgClick = () => {
+    console.log('handleImgClick', this.props.playground);
+    this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});
+    this.props.history.push('/PgItem');
+  }
 
-    handleClick = (event) =>{
-      console.log('in HC', event.target.id );
-    } //new route, query
+  render() {
 
-render() {
-    
     return (
       <>
         <PgListSearch />
-      
-      <div className="card" id="large">
-        
-        <p>PgList</p>
-        <p>{ this.props.reduxState.playground.map( 
-          ( playground )=> <div className="card" id="item" key={playground.id}> 
-            <h3>{playground.pg_name}</h3>
-            <p>{playground.description}</p><br/>
-            <button id={playground.id} onClick={ this.handleClick }>DETAILS</button><br/>
-            <img src={playground.img_url}></img>
-            </div> ) 
-          }</p>
 
-        {/* <PgItem /> */}
-        
-        {/* {this.props.reduxState.playground.map( park => { */}
-        {/* return <PgListCards park={ park } history={this.props.history} key={park.id} /> } ) } */}
+        <div className="card" id="large">
 
-        
+          <p>P L A Y G R O U N D S</p><br />
 
-      </div>
+          <div id="pg_list">{this.props.reduxState.playground.map(
+            (playground) => <div className="card" id="playground" key={playground.id}>
+                                       {/* originally had id="item" */}
+              <div id="pg_name">{playground.pg_name}</div>
+              {/* <p>{playground.description}</p> */}
+              <br />
+              <button id={playground.id} onClick={this.handleClick}>DETAILS</button><br />
+              <img src={playground.img_url} alt="playground-img" onClick={this.handleImgClick}></img>
+            </div>
+          )}</div>
+
+        </div>
       </>
     ) // end return
-} // end render
+  } // end render
 } // end component
 
 
@@ -62,6 +55,6 @@ render() {
 
 //export default PgList;
 //                      playground          reduxState.playground
-const mapStateToProps = ( reduxState ) => ( { reduxState } )
+const mapStateToProps = (reduxState) => ({ reduxState })
 
 export default connect(mapStateToProps)(PgList);

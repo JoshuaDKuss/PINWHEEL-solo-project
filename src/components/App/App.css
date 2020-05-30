@@ -35,7 +35,7 @@ body{
     background-color: rgb(161, 197, 219);
     margin: 11px;
     text-align: center;
-    opacity: 75%;
+    /* opacity: 75%; */
   }
 
   .card:hover {

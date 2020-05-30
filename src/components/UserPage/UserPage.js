@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 const UserPage = (props) => (
   <div>
     <h2 id="welcome">
-      Hello, { props.user.username }!
-    </h2><br/>
+      What's up, { props.user.username }!
+    </h2><br/><br/><br/>
 
     {/* <img src={Logo} alt="logo"></img> */}
     

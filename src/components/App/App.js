@@ -16,6 +16,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import PgList from '../PgList/PgList';
+import PgItem from '../PgItem/PgItem';
 //import Edit from '../Edit/Edit';
 import './App.css';
 
@@ -53,11 +54,15 @@ class App extends Component {
             <ProtectedRoute
               exact
               path="/info"
-              component={PgList}
-                // /api/info
+              component={PgList} 
+              />
+            <ProtectedRoute
+              exact
+              path="/PgItem"
+              component={PgItem}
             />
             {/* If none of the other routes matched, we will show a 404. */}
-            <Route render={() => <h1>404</h1>} />
+            <Route render={() => <h1>404 app</h1>} />
           </Switch>
           <Footer />
         </div>
