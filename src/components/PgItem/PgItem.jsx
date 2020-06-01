@@ -32,15 +32,15 @@ class Details extends Component {
     // }
 
     render() {
-        console.log(this.state);
+        console.log(this.props.reduxState);
         return (
-            <>
+            <div>
 
-            <div>{ JSON.stringify( this.props.reduxState.playground ) }</div>
+            <div>{ JSON.stringify( this.props.reduxState.playground.id ) }</div>
 
             {/* {/* <div className="card" id="large"></div> */}
             {/* <h2>{this.props.reduxState.playground.pg_name}</h2> */}
-            <br/><text>Name</text>
+            <br/><p>Name</p>
             <br/><button>Add as Favorite</button>
             {/* <form onSubmit={this.handleSubmit}>
                 <label>Description: </label>
@@ -76,9 +76,8 @@ class Details extends Component {
 
                 {/* <p>{JSON.stringify(this.props.reduxState.genres.name, null, 2)}</p> */}
 
-
             
-            </>
+            </div>
         ) // end return
     } // end render
 } // end component

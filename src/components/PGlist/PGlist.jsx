@@ -19,7 +19,7 @@ class PgList extends Component {
 
   handleImgClick = () => {
     console.log('handleImgClick', this.props.playground);
-    this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});
+    this.props.dispatch({type:'FETCH_PG', payload:this.props.playground});  // PG_DETAILS
     this.props.history.push('/PgItem');
   }
 
