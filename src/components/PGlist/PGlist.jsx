@@ -4,6 +4,7 @@ import './PgList.css';
 //import '../Details/Details';
 import PgDetailsButton from './PgDetailsButton';
 import PgListSearch from './PgListSearch';
+import PgAddNew from './PgAddNew';
 
 
 class PgList extends Component {
@@ -45,6 +46,7 @@ triggerDescriptionState = () => {
     return (
       <>
         <PgListSearch />
+        <PgAddNew />
 
         <div className="card" id="large">
 
@@ -55,7 +57,6 @@ triggerDescriptionState = () => {
                                        {/* originally had id="item" */}
               <div id="pg_name">{playground.pg_name}</div>
               <p>{playground.description}</p>
-              <br />
 
               {/* <button id={playground.id} onClick={this.handleDetailClick}>DETAILS</button><br /> */}
 
