@@ -1,9 +1,8 @@
 const playgroundReducer = (state = [], action) => {
+  console.log('in pg reducer:', action.payload);
     switch (action.type) {
       case 'SET_PG':
         return action.payload;
-      // case 'UNSET_PG':
-      //   return {};
       default:
         return state;
     }

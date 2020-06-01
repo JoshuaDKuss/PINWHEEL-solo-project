@@ -13,8 +13,8 @@ function* playgroundDetail(action) {
   } // end movieDetail
 
   function* detailSaga() {
-    yield takeLatest('FETCH_PG', fetchPlayground); 
+    yield takeLatest('PG_DETAIL', playgroundDetail); 
     // yield takeLatest('ADD_PG', postPlayground); //
   }
   
-  export default playgroundSaga;
+  export default detailSaga;

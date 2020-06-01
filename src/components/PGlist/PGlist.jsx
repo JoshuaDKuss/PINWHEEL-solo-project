@@ -7,10 +7,13 @@ import PgListSearch from './PgListSearch';
 
 
 class PgList extends Component {
+state = {
+  playground: ''
+}
 
   componentDidMount() {
     console.log('PgList props:', this.props);
-    this.props.dispatch({ type: 'FETCH_PG' });
+    this.props.dispatch({ type: 'FETCH_PG' }); // FETCH
   }
 
   handleClick = (event) => {
@@ -19,7 +22,7 @@ class PgList extends Component {
 
   handleImgClick = () => {
     console.log('handleImgClick', this.props.playground);
-    this.props.dispatch({type:'FETCH_PG', payload:this.props.playground});  // PG_DETAILS
+    this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});  // PG_DETAILS
     this.props.history.push('/PgItem');
   }
 

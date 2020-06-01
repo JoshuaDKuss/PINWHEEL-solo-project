@@ -31,17 +31,21 @@ class Details extends Component {
     //     this.props.history.push('/edit');
     // }
 
+    handleFavoriteClick = () =>{
+        console.log('fave clicked');
+    }
+
     render() {
         console.log(this.props.reduxState);
         return (
             <div>
 
-            <div>{ JSON.stringify( this.props.reduxState.playground.id ) }</div>
-
+            <div>{ JSON.stringify( this.props.reduxState.playground ) }</div>
+            
             {/* {/* <div className="card" id="large"></div> */}
             {/* <h2>{this.props.reduxState.playground.pg_name}</h2> */}
             <br/><p>Name</p>
-            <br/><button>Add as Favorite</button>
+            <br/><button onClick={this.handleFavoriteClick}>Add as Favorite</button>
             {/* <form onSubmit={this.handleSubmit}>
                 <label>Description: </label>
                 <textarea value={this.state.description} onChange={(event) => this.handleChangeFor(event, 'description')}></textarea>
