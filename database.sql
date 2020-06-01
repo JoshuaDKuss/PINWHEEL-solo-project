@@ -35,3 +35,8 @@ VALUES ('Casey Lake Park', '2101 17th Ave E, North Saint Paul 55109',
 INSERT INTO "playground" ("name", "address", "img_url", "description")
 VALUES ('Colby Hills Park', 'Belmont Ln E, North Saint Paul 55109', 'https://www.northstpaul.org/ImageRepository/Document?documentID=1377', 
 'Small, welcoming park in North Saint Paul. There are picnic tables under a public shelter, next to a small playground with swings. Open field nearby.');
+
+INSERT INTO "playground" ("pg_name", "address", "img_url", "description")
+VALUES ('Sherwood Playground', '2209 Kennard St, St Paul, MN 55109', 
+'https://maplewoodmn.gov/ImageRepository/Document?documentID=18637',
+'Medium sized playground seated next to a small picnic area. Baseball field, tennis courts and soccer field nearby. Stormwater pond nearby.');

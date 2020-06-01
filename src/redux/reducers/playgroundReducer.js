@@ -1,4 +1,4 @@
-const playgroundReducer = (state = [], action) => {
+const playgroundReducer = (state = [], action) => { //[]
   console.log('in pg reducer:', action.payload);
     switch (action.type) {
       case 'SET_PG':

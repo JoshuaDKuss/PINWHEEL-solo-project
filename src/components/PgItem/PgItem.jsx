@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 
 
 class Details extends Component {
-
-    // componentDidMount(){
-    //     console.log('PgItem props:', this.props);
-    //     this.props.dispatch( { type: 'FETCH_PG' } );
-    // }
+state = {
+    playground: ''
+}
+    componentDidMount(){
+        console.log('PgItem props:', this.props);
+        this.props.dispatch( { type: 'FETCH_PG' } ); // fetch pg, PG_DETAIL
+    }
 
     // handleChangeFor = (event, propToCrop) => {
     //     this.setState({

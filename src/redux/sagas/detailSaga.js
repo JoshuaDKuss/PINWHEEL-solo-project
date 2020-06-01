@@ -5,7 +5,7 @@ function* playgroundDetail(action) {
     try {
         const detailResponse = yield axios.get(`/info/description?id=${action.payload.id}`);
         // const genreResponse = yield axios.get(`/api/genres/details?id=${action.payload.id}`);
-        yield put({ type: 'SET_DESC', payload: detailResponse.data })
+        yield put({ type: 'SET_DESCRIPTION', payload: detailResponse.data })
         console.log(detailResponse.data);
     } catch (error) {
         console.log('Error fetching details', error);
