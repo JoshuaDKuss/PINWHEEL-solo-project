@@ -5,6 +5,30 @@ body {
     display: grid;
 }
 
+#description {
+  font-size: 10px;
+}
+
+#biggie{
+  font-size: 36px;
+  margin: 3px;
+}
+
+#delete{
+  float: left;
+  border-radius: 20px 20px 20px 20px;
+}
+
+#edit{
+  float: right;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#oblique{
+  font-style: oblique;
+  font-size: 12px;
+}
+
 .pgName {
     font-size: 18px;
     font-weight: bold;

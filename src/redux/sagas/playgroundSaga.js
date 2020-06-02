@@ -56,7 +56,7 @@ function* postPlayground(action) {
 
 function* deleteItem(action) {
   try {
-      yield axios.delete('/info/${action.payload.id}');
+      yield axios.delete('/info/{action.payload.id}'); //had ${}
       yield put({ type: 'GET_PG' });
   } catch (error) {
       console.log('Error with deleting items:', error);

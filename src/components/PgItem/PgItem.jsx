@@ -38,7 +38,7 @@ class PgItem extends Component {
             <div>
 
             <div>{ JSON.stringify( this.props.reduxState.playground ) }</div>
-            <div id="pgName">{this.props.reduxState.playground}</div>
+            <div id="pgImage">{this.props.reduxState.playground.img_url}</div>
             {/* {/* <div className="card" id="large"></div> */}
             {/* <h2>{this.props.reduxState.playground.pg_name}</h2> */}
             <br/><p>Name</p>

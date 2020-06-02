@@ -4,12 +4,15 @@ import { connect } from 'react-redux';
 //import LogOutButton from '../LogOutButton/LogOutButton';
 import './Nav.css';
 
+
 const Nav = (props) => (
   <div className="nav">
+   
     <Link to="/home">
     {/* <Link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'></Link> */}
       <h1 className="nav-title">P I N W H E E L</h1>
     </Link>
+
     <div className="nav-right"><br/><br/>
       <Link className="nav-link" to="/home">
         {/* Show this link if they are logged in or not,

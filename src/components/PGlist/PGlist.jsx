@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './PgList.css';
 //import '../Details/Details';
-import PgDetailsButton from './PgDetailsButton';
+//import PgDetailsButton from './PgDetailsButton';
 import PgListSearch from './PgListSearch';
-import PgAddNew from './PgAddNew';
+//import PgAddNew from './PgAddNew';
 
 
 class PgList extends Component {
 
-//   state = {
-//   playground: ''
-// }
+  state = {
+    pg_name: '',
+    address: '',
+    img_url: '',
+    description: ''
+}
 
 //  constructor(props) {
 //    super(props)
@@ -36,7 +39,7 @@ class PgList extends Component {
   } //new route, query
 
   deletePlayground = (user) => {
-    alert('are you sure?');
+    //alert('are you sure?');
     console.log(user);
     this.props.dispatch({type: 'DELETE_ITEM', payload: user});
   }
@@ -60,16 +63,18 @@ class PgList extends Component {
         {/* <PgAddNew /> */}
         <div id="addPlayground" onClick={this.handleAddPgClick}><button>Add A Playground!</button></div>
 
-        <div className="card" id="large">
+        <div>
+          {/* className="card" id="large" */}
 
-          <p>P L A Y G R O U N D S</p><br />
+          <p id="biggie">P L A Y G R O U N D S</p><br />
 
           <div id="pg_list">{this.props.reduxState.playground.map(
             (playground) => <div className="card" id="playground" key={playground.id}>
                                        {/* originally had id="item" */}
               <div id="pg_name">{playground.pg_name}</div>
-              <p>{playground.address}</p>
-              <p>{playground.description}</p>
+              <p id="oblique">{playground.address}</p>
+              <br/><img src={playground.img_url} alt="playground-img" onClick={this.handleImgClick}></img><br/>
+              <p id="description">{playground.description}</p>
 
               {/* <button id={playground.id} onClick={this.handleDetailClick}>DETAILS</button><br /> */}
 
@@ -80,8 +85,10 @@ class PgList extends Component {
               }</div>
               <PgDetailsButton description={this.triggerDescriptionState} /> */}
 
-              <br/><img src={playground.img_url} alt="playground-img" onClick={this.handleImgClick}></img>
-              <br/><button>delete</button>
+              
+              <br/><button id="delete" onClick={this.deletePlayground}>delete</button>
+              <button>FAVORITE</button>
+              <button id="edit">EDIT</button>
             </div>
           )}</div>
 
