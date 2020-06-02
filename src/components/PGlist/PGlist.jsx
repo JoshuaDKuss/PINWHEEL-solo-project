@@ -13,18 +13,18 @@ class PgList extends Component {
 //   playground: ''
 // }
 
- constructor(props) {
-   super(props)
-   this.state = { isEmptyState: true }
-}
+//  constructor(props) {
+//    super(props)
+//    this.state = { isEmptyState: true }
+// }
 
-triggerDescriptionState = () => {
-  this.setState({
-    ...this.state,
-    isEmptyState: false,
-    isDescriptionState: true
-  })
-}
+// triggerDescriptionState = () => {
+//   this.setState({
+//     ...this.state,
+//     isEmptyState: false,
+//     isDescriptionState: true
+//   })
+// }
 
   componentDidMount() {
     console.log('PgList props:', this.props);
@@ -35,10 +35,21 @@ triggerDescriptionState = () => {
     console.log('in HDC', event.target.id);
   } //new route, query
 
+  deletePlayground = (user) => {
+    alert('are you sure?');
+    console.log(user);
+    this.props.dispatch({type: 'DELETE_ITEM', payload: user});
+  }
+
   handleImgClick = () => {
     console.log('handleImgClick', this.props.playground);
-    this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});  // PG_DETAIL, fetch PG
-    //this.props.history.push('/PgItem');
+    //this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});  // PG_DETAIL, fetch PG
+    this.props.history.push('/PgItem');
+  }
+
+  handleAddPgClick = () =>{
+    console.log('handleAddPgClick');
+    this.props.history.push('/PgAddNew');
   }
 
   render() {
@@ -46,7 +57,8 @@ triggerDescriptionState = () => {
     return (
       <>
         <PgListSearch />
-        <PgAddNew />
+        {/* <PgAddNew /> */}
+        <div id="addPlayground" onClick={this.handleAddPgClick}><button>Add A Playground!</button></div>
 
         <div className="card" id="large">
 
@@ -56,17 +68,20 @@ triggerDescriptionState = () => {
             (playground) => <div className="card" id="playground" key={playground.id}>
                                        {/* originally had id="item" */}
               <div id="pg_name">{playground.pg_name}</div>
+              <p>{playground.address}</p>
               <p>{playground.description}</p>
 
               {/* <button id={playground.id} onClick={this.handleDetailClick}>DETAILS</button><br /> */}
 
-              <div>{this.state.isEmptyState && <PgDetailsButton description={this.triggerDescriptionState} />}
+
+              {/* <div>{this.state.isEmptyState && <PgDetailsButton description={this.triggerDescriptionState} />}
               {this.state.isDescriptionState 
               // && <AnotherComponent />
               }</div>
-              <PgDetailsButton description={this.triggerDescriptionState} />
+              <PgDetailsButton description={this.triggerDescriptionState} /> */}
 
               <br/><img src={playground.img_url} alt="playground-img" onClick={this.handleImgClick}></img>
+              <br/><button>delete</button>
             </div>
           )}</div>
 

@@ -37,18 +37,33 @@ router.get('/', (req, res) => {  // just / according to Chris
 /**
  * POST route template
  */
-// router.post('/', (req, res) => {
-//     console.log('pg router post');
-//     const queryText = `INSERT INTO "playground" ("description") VALUES ($1);`;
-//     const values = [req.body.description];
-//     pool.query(queryText, values)
-//     .then((response)=>{
-//         res.sendStatus(201)
-//     })
-//     .catch((error)=>{
-//         console.log('Error POSTING to the DB', error);
-//         res.sendStatus(500);
-//     })
-// });
+router.post('/', (req, res) => {   ///addPlayground
+    console.log('pg router post');
+    const queryText = `INSERT INTO playground ("pg_name", "address", "img_url", "description") 
+                       VALUES ($1, $2, $3, $4);`; //RETURNING "id"?
+    const values = [req.body.pg_name, req.body.address, req.body.img_url, req.body.description];
+    pool.query(queryText, values)
+    .then((response)=>{
+        res.sendStatus(201)
+    })
+    .catch((error)=>{
+        console.log('Error POSTING addPg to the DB', error);
+        res.sendStatus(500);
+    })
+});
+
+router.delete('/:id', (req, res) => {   //rejectUnauthenticated,
+    console.log(req.params.id);
+    const queryText = `DELETE FROM "playground" WHERE id = $1;`;
+    pool.query(queryText, [req.params.id])
+    .then((response)=>{
+        res.sendStatus(200);
+    })
+    .catch((error)=>{
+        console.log('Error DELETING playground from DB', error);
+        res.sendStatus(500);
+    })
+});
+
 
 module.exports = router;

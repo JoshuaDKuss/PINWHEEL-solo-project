@@ -2,27 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-class Details extends Component {
-state = {
-    playground: ''
-}
+class PgItem extends Component {
+    state = {
+        pg_name: '',
+        address: '',
+        img_url: '',
+        description: ''
+    }
+
     componentDidMount(){
         console.log('PgItem props:', this.props);
         this.props.dispatch( { type: 'FETCH_PG' } ); // fetch pg, PG_DETAIL
     }
 
-    // handleChangeFor = (event, propToCrop) => {
-    //     this.setState({
-    //         [propToCrop]: event.target.value
-    //     })
-    // }
-    // handleSubmit = (event) => {     // pgSaga
-    //     event.preventDefault();
-    //     this.props.dispatch({type: 'ADD_PG', payload: this.state});
-    //     this.setState({
-    //         description: '',
-    //     })
-    // }
+   
+
+    
 
     handleBackClick = () => {
         this.props.history.push('/');
@@ -43,11 +38,13 @@ state = {
             <div>
 
             <div>{ JSON.stringify( this.props.reduxState.playground ) }</div>
-            
+            <div id="pgName">{this.props.reduxState.playground}</div>
             {/* {/* <div className="card" id="large"></div> */}
             {/* <h2>{this.props.reduxState.playground.pg_name}</h2> */}
             <br/><p>Name</p>
             <br/><button onClick={this.handleFavoriteClick}>Add as Favorite</button>
+
+
             {/* <form onSubmit={this.handleSubmit}>
                 <label>Description: </label>
                 <textarea value={this.state.description} onChange={(event) => this.handleChangeFor(event, 'description')}></textarea>
@@ -92,4 +89,4 @@ state = {
 // export default Details;
 const mapStateToProps = (reduxState) => ({ reduxState })
 
-export default connect(mapStateToProps)(Details);
+export default connect(mapStateToProps)(PgItem);

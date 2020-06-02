@@ -18,6 +18,7 @@ import UserPage from '../UserPage/UserPage';
 import PgList from '../PgList/PgList';
 import PgItem from '../PgItem/PgItem';
 //import Edit from '../Edit/Edit';
+import PgAddNew from '../PgList/PgAddNew';
 import './App.css';
 
 class App extends Component {
@@ -59,7 +60,12 @@ class App extends Component {
             <ProtectedRoute
               exact
               path="/PgItem"
-              component={PgItem}
+              component={PgItem} 
+            />
+            <ProtectedRoute
+              exact
+              path="/PgAddNew"
+              component={PgAddNew} 
             />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404 app</h1>} />
@@ -69,5 +75,6 @@ class App extends Component {
       </Router>
   )}
 }
+ 
 
 export default connect()(App);
