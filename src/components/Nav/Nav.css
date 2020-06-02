@@ -1,12 +1,14 @@
 .nav-title {
     /* font-size: 40px; */
-    font-weight: 400;
+    /* overflow: hidden; */
+    font-weight: 600;
     display: inline-block;
     color: orangered;
-    padding: 3px;
+    padding: 20px;
     /* font-family: 'Bungee Shade';font-size: 42px; */
     /* font-family: @import url('https://fonts.googleapis.com/css?family=Bungee Shade&display-swap'); */
-}
+    border-radius: 24px 24px 24px 24px;
+  }
 
 /* @import url('https://fonts.googleapis.com/css?family=Bungee Shade&display-swap'); */
 
@@ -14,14 +16,43 @@
   overflow: hidden;
   background-color: lightskyblue;
   opacity: 73%;
+  background: url(logo_small_60.png);
+  background-repeat: no-repeat;
+  
 }
+
+/* #logo{
+  animation: App-logo-spin infinite 0.6s linear;
+  height: 45vmin;
+} */
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+} */
+
+/* img{
+  height: 30px;
+} */
+
+body{
+  background-image: url(logo_small_60.png);
+}
+
+/* .logo {
+  background-image: url(./App/logo.png);
+} */
 
 .nav-link {
   float: left;
   color: orangered;
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
   text-align: center;
-  padding: 24px 10px;
+  padding: 15px 10px;
   text-decoration: none;
   font-size: 15px;
 
@@ -30,12 +61,17 @@
   border:none;
   cursor: pointer;
   outline:0;
+  border-radius: 24px 24px 24px 24px;
 }
 
 .nav-link:hover {
   background-color: #9ce1e2;
 }
+.nav-title:hover {
+  background-color: #9ce1e2;
+}
 
 .nav-right {
   float: right;
+  
 }

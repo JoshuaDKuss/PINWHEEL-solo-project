@@ -17,7 +17,9 @@ body{
   margin: 7px;
   /* color: orange; */
   background-image: url(pg1.jpg);
+  /* background-repeat: no-repeat; */
   background-size: 100%;
+  /* auto? */
   text-align: center;
   font-family: 'Verdana', serif;
 }
@@ -36,6 +38,7 @@ body{
     margin: 11px;
     text-align: center;
     /* opacity: 75%; */
+    /* background-image: url(logo.png); */
   }
 
   .card:hover {
