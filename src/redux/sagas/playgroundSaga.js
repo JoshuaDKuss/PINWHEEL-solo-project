@@ -54,20 +54,23 @@ function* postPlayground(action) {
 //   }
 // }
 
-function* deleteItem(action) {
-  try {
-      yield axios.delete('/info/{action.payload.id}'); //had ${}
-      yield put({ type: 'GET_PG' });
-  } catch (error) {
-      console.log('Error with deleting items:', error);
-  }
+function* deletePlayground(action) {
+    yield axios.delete(`/info/deletePlayground/${action.payload}`);  // ${id}
 }
+
+// try {
+//   yield axios.delete('/info/${id}', action.payload); //had ${}
+//   yield put({ type: 'GET_PG' });
+// } catch (error) {
+//   console.log('Error with deleting items:', error);
+// }
+
 
 
 function* playgroundSaga() {
   yield takeLatest('FETCH_PG', fetchPlaygrounds); 
   yield takeLatest('ADD_PG', postPlayground); //
-  yield takeLatest('DELETE_ITEM', deleteItem); //
+  yield takeLatest('DELETE_PG', deletePlayground); //
 }
 
 export default playgroundSaga;

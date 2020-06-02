@@ -31,16 +31,16 @@ class PgAddNew extends Component {
         console.log(this.state)
         return (
             <>
-                <p>Add A Playground</p>
+                <p id="addie">Add A Playground</p>
                 <form onSubmit={this.handleSubmit}>
                 <label>Playground Name: </label>
-                <textarea value={this.state.pg_name} onChange={(event) => this.handleChangeFor(event, 'pg_name')}></textarea>
+                <textarea value={this.state.pg_name} onChange={(event) => this.handleChangeFor(event, 'pg_name')}></textarea><br/>
                 
                 <label>Address: </label>
-                <textarea value={this.state.address} onChange={(event) => this.handleChangeFor(event, 'address')}></textarea>
+                <textarea value={this.state.address} onChange={(event) => this.handleChangeFor(event, 'address')}></textarea><br/>
                 
                 <label>Description: </label>
-                <textarea value={this.state.description} onChange={(event) => this.handleChangeFor(event, 'description')}></textarea>
+                <textarea value={this.state.description} onChange={(event) => this.handleChangeFor(event, 'description')}></textarea><br/>
             
                 <label>Image Url: </label>
                 <textarea value={this.state.img_url} onChange={(event) => this.handleChangeFor(event, 'img_url')}></textarea>

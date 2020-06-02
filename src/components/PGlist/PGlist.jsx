@@ -38,10 +38,10 @@ class PgList extends Component {
     console.log('in HDC', event.target.id);
   } //new route, query
 
-  deletePlayground = (user) => {
-    //alert('are you sure?');
-    console.log(user);
-    this.props.dispatch({type: 'DELETE_ITEM', payload: user});
+  deletePlayground = (event) => {
+    //alert('DELETE PLAYGROUND ....are you sure?');
+    console.log('clicked delete', event);
+    this.props.dispatch({type: 'DELETE_PG', payload: event.target.id});
   }
 
   handleImgClick = () => {
@@ -55,13 +55,17 @@ class PgList extends Component {
     this.props.history.push('/PgAddNew');
   }
 
+  handleFavoriteClick = () =>{
+    console.log('clicked FAVE');
+  }
+
   render() {
 
     return (
       <>
-        <PgListSearch />
-        {/* <PgAddNew /> */}
-        <div id="addPlayground" onClick={this.handleAddPgClick}><button>Add A Playground!</button></div>
+        {/* <PgListSearch /> */}
+        
+        <div id="addPlayground" onClick={this.handleAddPgClick}><button id="addPgBtn">Add A Playground!</button></div>
 
         <div>
           {/* className="card" id="large" */}
@@ -87,7 +91,7 @@ class PgList extends Component {
 
               
               <br/><button id="delete" onClick={this.deletePlayground}>delete</button>
-              <button>FAVORITE</button>
+              <button id="favorite" onClick={this.handleFavoriteClick}>FAVORITE</button>
               <button id="edit">EDIT</button>
             </div>
           )}</div>

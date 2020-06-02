@@ -52,7 +52,7 @@ router.post('/', (req, res) => {   ///addPlayground
     })
 });
 
-router.delete('/:id', (req, res) => {   //rejectUnauthenticated,
+router.delete('/:id', (req, res) => {   // had '/deletePlayground/:id',
     console.log(req.params.id);
     const queryText = `DELETE FROM playground WHERE "id" = $1;`;
     pool.query(queryText, [req.params.id])
