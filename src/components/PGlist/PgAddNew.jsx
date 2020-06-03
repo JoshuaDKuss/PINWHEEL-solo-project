@@ -25,6 +25,7 @@ class PgAddNew extends Component {
             img_url: '',
             description: ''
         })
+        this.props.history.push('/PgThanks');
     }
 
     render() {

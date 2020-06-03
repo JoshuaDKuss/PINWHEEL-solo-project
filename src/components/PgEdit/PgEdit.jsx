@@ -11,7 +11,7 @@ class PgEdit extends Component {
     handleClick = () => {
         console.log(this.state, this.props.reduxState.playground.id);
         this.props.dispatch({ type: `EDIT_PG`, payload: { ...this.state, id: this.props.reduxState.playground.id } });
-        this.props.history.push('/info');
+        this.props.history.push('/PgThanks');
     }
 
     handleNameChange = (event) => {
@@ -26,7 +26,7 @@ class PgEdit extends Component {
 
     handleCancelClick = () => {
         console.log('cancel');
-        this.props.history.push('/PgList');
+        this.props.history.push('/info');
     }
 
     render() {

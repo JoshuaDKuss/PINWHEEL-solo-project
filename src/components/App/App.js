@@ -17,6 +17,7 @@ import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import PgList from '../PgList/PgList';
 import PgItem from '../PgItem/PgItem';
+import PgThanks from '../PgThanks/PgThanks';
 import PgEdit from '../PgEdit/PgEdit';
 import PgAddNew from '../PgList/PgAddNew';
 import './App.css';
@@ -71,6 +72,11 @@ class App extends Component {
               exact
               path="/PgAddNew"
               component={PgAddNew} 
+            />
+            <ProtectedRoute
+              exact
+              path="/PgThanks"
+              component={PgThanks} 
             />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404 app</h1>} />

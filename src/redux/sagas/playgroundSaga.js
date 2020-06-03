@@ -40,29 +40,25 @@ function* postPlayground(action) {
 // }
 
 function* editPlayground(action){
-  let id = action.payload;
+  // let id = action.payload;
   console.log('in edit PG', action.payload);
   try {
-    const response = yield axios.put(`/info`); // /playground/${description}
-    yield put({
-      type: 'GET_PG'
-    })
+    yield axios.put(`/info/`, action.payload); // /playground/${description}   also had const response = 
+    yield put({type: 'GET_PG'})
   } catch (error) {
-    console.log(error);
+    console.log('error editing PG', error);
   }
 }
 
 function* deletePlayground(action) {
-    yield axios.delete(`/info/deletePlayground/${action.payload}`);  // ${id}
+    // yield axios.delete(`/info/deletePlayground/${action.payload}`);  // ${id}
+try {
+  yield axios.delete(`/info/${action.payload}`, action.payload); //had ${}, /info/  , action.payload
+  yield put({ type: 'GET_PG' }); //GET
+} catch (error) {
+  console.log('Error with deleting items:', error);
 }
-
-// try {
-//   yield axios.delete('/info/${id}', action.payload); //had ${}
-//   yield put({ type: 'GET_PG' });
-// } catch (error) {
-//   console.log('Error with deleting items:', error);
-// }
-
+}
 
 
 function* playgroundSaga() {

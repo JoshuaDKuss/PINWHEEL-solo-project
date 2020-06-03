@@ -1,11 +1,12 @@
 const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
+const { rejectUnauthenticated } = require('../modules/authentication-middleware');
 
 /**
  * GET route template
  */
-router.get('/', (req, res) => {  // just / according to Chris
+router.get('/', rejectUnauthenticated, (req, res) => {  // just / according to Chris,  , rejectUnauthenticated
     console.log('pg router get');
     const queryText = `SELECT * FROM playground ORDER BY "id";`;  //;
     pool.query(queryText)
@@ -54,7 +55,7 @@ router.post('/', (req, res) => {   ///addPlayground
     })
 });
 
-router.delete('/:id', (req, res) => {   // had '/deletePlayground/:id',
+router.delete('/:id', (req, res) => {   // had '/deletePlayground/:id',  /delete/:id
     console.log(req.params.id);
     const queryText = `DELETE FROM playground WHERE "id" = $1;`;
     pool.query(queryText, [req.params.id])

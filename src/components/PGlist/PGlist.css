@@ -45,6 +45,11 @@ textarea{
   text-shadow: 0 0 9px rgb(255, 67, 67), 0 0 5px rgb(128, 255, 105);
   /* text-shadow: 0 0 19px #FF0000, 0 0 5px #0000FF; */
 }
+.selector{
+  float: left;
+  margin: 5px;
+  background-color: aquamarine;
+}
 
 #delete{
   float: left;
