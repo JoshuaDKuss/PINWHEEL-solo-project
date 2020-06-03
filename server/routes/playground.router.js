@@ -18,21 +18,23 @@ router.get('/', (req, res) => {  // just / according to Chris
         });
 });
 
-// router.put('/', (req, res) => {
-//      console.log('pg router put');
-//     //console.log('router put', req.body);
-//     const queryText = `UPDATE "playground" SET "description"= $4 WHERE "id"=$1`;
-//     const queryValues = [req.body.id, req.body.description];
-//     pool.query(queryText, queryValues)
-//         .then(() => {
-//             res.sendStatus(200);
-//             console.log("router put worked!");
-//         })
-//         .catch((err) => {
-//             console.log('Error updating movie query', err);
-//             res.sendStatus(500)
-//         });
-// });
+router.put('/', (req, res) => {
+     console.log('pg router put');
+    //console.log('router put', req.body);
+    const queryText = `UPDATE playground
+            SET "pg_name" = $2, "description"= $4 
+            WHERE "id"=$1`;
+    const queryValues = [req.body.id, req.body.pg_name, req.body.description];
+    pool.query(queryText, queryValues)
+        .then(() => {
+            res.sendStatus(200);
+            console.log("router put worked!");
+        })
+        .catch((err) => {
+            console.log('Error updating movie query', err);
+            res.sendStatus(500)
+        });
+});
 
 /**
  * POST route template

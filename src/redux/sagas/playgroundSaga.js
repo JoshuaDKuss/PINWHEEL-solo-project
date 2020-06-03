@@ -12,7 +12,7 @@ function* fetchPlaygrounds() {
     // set the client-side user object to let the client-side code know the user is logged in
     yield put({ type: 'SET_PG', payload: response.data });  
     //yield put(fetchPlaygrounds(action));
-    console.log('get PGs from server', response.data);
+    //console.log('get PGs from server', response.data);
   } catch (error) {
     console.log('PG get request failed', error);
   }
@@ -27,8 +27,6 @@ function* postPlayground(action) {
   }
 }
 
-
-
 // function* updatePlayground(action) {
 //   //let playground = {playground: action.payload}
 //   console.log('in update pg / pg saga');
@@ -41,18 +39,18 @@ function* postPlayground(action) {
 //   }
 // }
 
-// function* editPlayground(action){
-//   let id = action.payload;
-//   console.log('in edit PG', action.payload);
-//   try {
-//     const response = yield axios.put(`/info`); // /playground/${description}
-//     yield put({
-//       type: 'GET_PG'
-//     })
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
+function* editPlayground(action){
+  let id = action.payload;
+  console.log('in edit PG', action.payload);
+  try {
+    const response = yield axios.put(`/info`); // /playground/${description}
+    yield put({
+      type: 'GET_PG'
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 function* deletePlayground(action) {
     yield axios.delete(`/info/deletePlayground/${action.payload}`);  // ${id}
@@ -71,6 +69,7 @@ function* playgroundSaga() {
   yield takeLatest('FETCH_PG', fetchPlaygrounds); 
   yield takeLatest('ADD_PG', postPlayground); //
   yield takeLatest('DELETE_PG', deletePlayground); //
+  yield takeLatest('EDIT_PG', editPlayground);
 }
 
 export default playgroundSaga;

@@ -17,7 +17,7 @@ import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import PgList from '../PgList/PgList';
 import PgItem from '../PgItem/PgItem';
-//import Edit from '../Edit/Edit';
+import PgEdit from '../PgEdit/PgEdit';
 import PgAddNew from '../PgList/PgAddNew';
 import './App.css';
 
@@ -62,6 +62,11 @@ class App extends Component {
               path="/PgItem"
               component={PgItem} 
             />
+            <ProtectedRoute
+              exact
+              path="/PgEdit"
+              component={PgEdit} 
+              />
             <ProtectedRoute
               exact
               path="/PgAddNew"
