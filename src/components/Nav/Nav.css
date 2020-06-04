@@ -4,7 +4,7 @@
     font-weight: 600;
     display: inline-block;
     color: orangered;
-    padding: 20px;
+    padding: 12px;
     /* font-family: 'Bungee Shade';font-size: 42px; */
     /* font-family: @import url('https://fonts.googleapis.com/css?family=Bungee Shade&display-swap'); */
     border-radius: 24px 24px 24px 24px;
@@ -20,6 +20,9 @@
   background-repeat: no-repeat;
   
 }
+
+
+
 
 /* #logo{
   animation: App-logo-spin infinite 0.6s linear;

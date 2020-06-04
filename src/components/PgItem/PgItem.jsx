@@ -11,8 +11,8 @@ class PgItem extends Component {
     }
 
     componentDidMount(){
-        console.log('PgItem props:', this.props);
-        this.props.dispatch( { type: 'FETCH_PG' } ); // fetch pg, PG_DETAIL
+        console.log('PgItem props:', this.props.match.params.id);
+        this.props.dispatch( { type: 'FETCH_PG', payload: { ...this.state, id: this.props.match.params.id }  } ); // fetch pg, PG_DETAIL
     }
 
    
@@ -20,7 +20,7 @@ class PgItem extends Component {
     
 
     handleBackClick = () => {
-        this.props.history.push('/');
+        this.props.history.push('/info');
     }
 
     // handleEditClick = () => {
@@ -36,8 +36,8 @@ class PgItem extends Component {
         console.log(this.props.reduxState);
         return (
             <div>
-
-            <div>{ JSON.stringify( this.props.reduxState.playground ) }</div>
+            <button onClick={this.handleBackClick}>BACK</button>
+            <div>{ JSON.stringify( this.props.reduxState.playground.id ) }</div>
             <div id="pgImage">{this.props.reduxState.playground.img_url}</div>
             {/* {/* <div className="card" id="large"></div> */}
             {/* <h2>{this.props.reduxState.playground.pg_name}</h2> */}

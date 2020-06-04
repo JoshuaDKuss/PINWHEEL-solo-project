@@ -45,10 +45,10 @@ class PgList extends Component {
     this.props.dispatch({ type: 'FETCH_PG' });
   }
 
-  handleImgClick = () => {
-    console.log('handleImgClick', this.props.playground);
+  handleImgClick = (id) => {
+    console.log('handleImgClick', id);
     //this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});  // PG_DETAIL, fetch PG
-    this.props.history.push('/PgItem');
+    this.props.history.push(`/PgItem/${id}`);
   }
 
   handleAddPgClick = () =>{
@@ -85,7 +85,7 @@ class PgList extends Component {
                                        {/* originally had id="item" */}
               <div id="pg_name">{playground.pg_name}</div>
               <p id="oblique">{playground.address}</p>
-              <br/><img src={playground.img_url} alt="playground-img" onClick={this.handleImgClick}></img><br/>
+              <br/><img src={playground.img_url} alt="playground-img" onClick={() => this.handleImgClick(playground.id)}></img><br/>
               <p id="description">{playground.description}</p>
 
               {/* <button id={playground.id} onClick={this.handleDetailClick}>DETAILS</button><br /> */}

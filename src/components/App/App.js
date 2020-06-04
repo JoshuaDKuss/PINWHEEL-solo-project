@@ -63,7 +63,7 @@ class App extends Component {
               />
             <ProtectedRoute
               exact
-              path="/PgItem"
+              path="/PgItem/:id"
               component={PgItem} 
             />
             <ProtectedRoute

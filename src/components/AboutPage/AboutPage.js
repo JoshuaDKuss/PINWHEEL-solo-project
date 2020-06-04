@@ -15,9 +15,11 @@ const AboutPage = () => (
       As the father of 2 young girls, I wanted to make an app that was more 
       detailed than Google Maps, regarding playground info. We spend all
       summer at playgrounds, and my aim is to bring a sense of whimsy to 
-      this app, harkening back to my own childhood in the 1980's.</p><br/>
+      this app, harkening back to my own childhood in the 1980's.</p>
       {/* <img src={logo} id="logo" alt="logo" /> */}
-      <p>
+      <img class="imageSpin" src="https://bloximages.chicago2.vip.townnews.com/mtstandard.com/content/tncms/assets/v3/editorial/c/82/c82b41b7-15a8-57ab-b7a3-961607f7987f/55d3c70d3bd5e.image.png" 
+      alt="spin" width="120" height="120"></img>
+      <br/><p>
       Why name it “Pinwheel”? Pinwheels, in Chinese culture, represent 
       “childhood innocence”, “unseen energy” and “spiritual freedom”. 
       Sounds like a playground to me!

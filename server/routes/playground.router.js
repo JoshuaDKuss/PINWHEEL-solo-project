@@ -19,6 +19,8 @@ router.get('/', rejectUnauthenticated, (req, res) => {  // just / according to C
         });
 });
 
+// select all from playground where id = id
+
 router.put('/:id', rejectUnauthenticated, (req, res) => {  // '/:id'
      console.log('pg router put');
     //console.log('router put', req.body);
