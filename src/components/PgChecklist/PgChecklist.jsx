@@ -54,12 +54,13 @@ let item2 = <Item message="Water, drinks" />;
 let item3 = <Item message="Snacks" />;
 let item4 = <Item message="Wet Wipes / Hand Sanitizer" />;
 let item5 = <Item message="Toys, balls, kites" />;
-let item6 = <Item message="Sunscreen" />;
+let item6 = <Item message="Sunscreen, toner" />;
 let item7 = <Item message="Sunglasses" />;
-let item8 = <Item message="Swimsuits, Water shoes, towels" />;
+let item8 = <Item message="Swimsuits, towels, sandals" />;
 let item9 = <Item message="Diapers" />;
+let item10 = <Item message="Hiking/Tennis/Basketball/Water shoes" />;
 
-let allTheThings = [item2, item3, item4, item5, item6, item7, item8, item9];
+let allTheThings = [item2, item3, item4, item5, item6, item7, item8, item9, item10];
 class ItemList extends React.Component {
   constructor (props){
     super ();
