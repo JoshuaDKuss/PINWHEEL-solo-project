@@ -4,25 +4,28 @@ import './PgChecklist.css';
 
 
 class PgChecklist extends Component {
-  constructor (){ //props
+  constructor (props){ 
     super ();
   }
   render (){
     return (
+      <>
+      <br/><p id="biggie">C H E C K L I S T</p><br />
       <div className="grid-container3">
+        
         <ItemList />
-        <br />
         <br />
         <br />
         {/* <ItemCount count={allTheThings.length} /> */}
         {/* <hr /> */}
       </div>
+      </>
     );
   }
 }
 
 class Item extends React.Component {
-  constructor (){ // props
+  constructor (props){ // props
     super ();
 
     this.state = {

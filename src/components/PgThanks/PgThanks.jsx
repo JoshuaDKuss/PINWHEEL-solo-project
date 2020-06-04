@@ -13,8 +13,9 @@ class PgThanks extends Component {
     render() {
         return (
             <div>
-                <p>Thank you!</p><br/>
-                <button onClick={this.handleClickThanks}>Back to Playgrounds</button>
+                <br/><p id="biggie">T H A N K</p>
+                <p id="biggie">Y O U</p><br /><br />
+                <button id="favorite" onClick={this.handleClickThanks}>Back to Playgrounds</button>
             </div>
         )
     }

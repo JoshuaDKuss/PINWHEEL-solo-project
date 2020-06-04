@@ -67,7 +67,12 @@ textarea{
 
 #favorite{
   border-radius: 18px 18px 18px 18px;
-  background-color: greenyellow;
+  background-color: rgb(92, 255, 92);
+  height: 40px;
+}
+
+#favorite:hover{
+  background-color: rgb(172, 255, 161);
 }
 
 #oblique{

@@ -9,7 +9,8 @@ import './AboutPage.css';
 
 const AboutPage = () => (
   <div className="container">
-    <div className="card">
+    
+    <div className="cardAbout">
       <p>
       As the father of 2 young girls, I wanted to make an app that was more 
       detailed than Google Maps, regarding playground info. We spend all
