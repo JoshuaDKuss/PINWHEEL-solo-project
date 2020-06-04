@@ -19,11 +19,11 @@ router.get('/', rejectUnauthenticated, (req, res) => {  // just / according to C
         });
 });
 
-router.put('/PgEdit/:id', rejectUnauthenticated, (req, res) => {  // '/:id'
+router.put('/:id', rejectUnauthenticated, (req, res) => {  // '/:id'
      console.log('pg router put');
     //console.log('router put', req.body);
     const queryText = `UPDATE playground
-            SET "pg_name" = $2, "description"= $4 
+            SET "pg_name" = $2, "description"= $3 
             WHERE "id"=$1`;
     const queryValues = [req.body.id, req.body.pg_name, req.body.description];
     pool.query(queryText, queryValues)

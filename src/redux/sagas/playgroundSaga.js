@@ -49,9 +49,9 @@ function* postPlayground(action) {
 
 function* editPlayground(action) {
   // let id = action.payload;
-  console.log('in edit PG', action.payload);
+  console.log('in edit PG', action.payload.id);
   try {
-    yield axios.put(`/PgEdit/${action.payload}`, action.payload); //   /playground/${description}   also had const response = 
+    yield axios.put(`/info/${action.payload.id}`, action.payload); //   /playground/${description}   also had const response = 
                            // `/info/`            ////// /info/${action.payload.id}    , action.payload
     yield put({
       type: 'GET_PG'

@@ -61,9 +61,10 @@ class PgList extends Component {
     //this.props.dispatch({ type: 'FAVE_PG', payload: id });
   }
 
-  editPlayground = () =>{
-    console.log('edit clicked');
-    this.props.history.push('/PgEdit');
+  editPlayground = (id) =>{
+    console.log('edit clicked', id);
+
+    this.props.history.push(`/PgEdit/${id}`);
   }
 
   render() {
@@ -97,7 +98,7 @@ class PgList extends Component {
               
               <br/><button id="delete" onClick={() => this.deletePlayground(playground.id)}>delete</button>
               <button id="favorite" onClick={() => this.handleFavoriteClick(playground.id)}>FAVORITE</button>
-              <button id="edit" onClick={this.editPlayground}>EDIT</button>
+              <button id="edit" onClick={() => this.editPlayground(playground.id)}>EDIT</button>
             </div>
           )}</div>
 
