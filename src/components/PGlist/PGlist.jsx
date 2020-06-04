@@ -56,11 +56,12 @@ class PgList extends Component {
     this.props.history.push('/PgAddNew');
   }
 
-  handleFavoriteClick = () =>{
-    console.log('clicked FAVE');
+  handleFavoriteClick = (id) =>{
+    console.log('clicked FAVE', id);
+    //this.props.dispatch({ type: 'FAVE_PG', payload: id });
   }
 
-  handleEditClick = () =>{
+  editPlayground = () =>{
     console.log('edit clicked');
     this.props.history.push('/PgEdit');
   }
@@ -95,8 +96,8 @@ class PgList extends Component {
               <PgDetailsButton description={this.triggerDescriptionState} /> */}
               
               <br/><button id="delete" onClick={() => this.deletePlayground(playground.id)}>delete</button>
-              <button id="favorite" onClick={this.handleFavoriteClick}>FAVORITE</button>
-              <button id="edit" onClick={this.handleEditClick}>EDIT</button>
+              <button id="favorite" onClick={() => this.handleFavoriteClick(playground.id)}>FAVORITE</button>
+              <button id="edit" onClick={this.editPlayground}>EDIT</button>
             </div>
           )}</div>
 

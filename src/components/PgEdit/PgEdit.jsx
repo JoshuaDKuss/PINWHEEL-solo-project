@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 
 class PgEdit extends Component {
     state = {
-        pg_name:'',
-        description: ''
+        pg_name: '',
+        description: ''   // ''
     }
 
     handleClick = () => {
         console.log(this.state, this.props.reduxState.playground.id);
         this.props.dispatch({ type: `EDIT_PG`, payload: { ...this.state, id: this.props.reduxState.playground.id } });
-        this.props.history.push('/PgThanks');
+        this.props.history.push('/info'); //PgThanks
     }
 
     handleNameChange = (event) => {

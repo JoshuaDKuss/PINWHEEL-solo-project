@@ -19,7 +19,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {  // just / according to C
         });
 });
 
-router.put('/', (req, res) => {
+router.put('/PgEdit/:id', rejectUnauthenticated, (req, res) => {  // '/:id'
      console.log('pg router put');
     //console.log('router put', req.body);
     const queryText = `UPDATE playground
@@ -32,7 +32,7 @@ router.put('/', (req, res) => {
             console.log("router put worked!");
         })
         .catch((err) => {
-            console.log('Error updating movie query', err);
+            console.log('Error updating pg, router put pg router', err);
             res.sendStatus(500)
         });
 });
@@ -40,7 +40,7 @@ router.put('/', (req, res) => {
 /**
  * POST route template
  */
-router.post('/', (req, res) => {   ///addPlayground
+router.post('/', rejectUnauthenticated, (req, res) => {   ///addPlayground
     console.log('pg router post');
     const queryText = `INSERT INTO playground ("pg_name", "address", "img_url", "description") 
                        VALUES ($1, $2, $3, $4);`; //RETURNING "id"?
@@ -55,7 +55,7 @@ router.post('/', (req, res) => {   ///addPlayground
     })
 });
 
-router.delete('/:id', (req, res) => {   // had '/deletePlayground/:id',  /delete/:id
+router.delete('/:id', rejectUnauthenticated, (req, res) => {   // had '/deletePlayground/:id',  /delete/:id
     console.log(req.params.id);
     const queryText = `DELETE FROM playground WHERE "id" = $1;`;
     pool.query(queryText, [req.params.id])

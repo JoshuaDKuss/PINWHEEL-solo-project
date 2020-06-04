@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class PgThanks extends Component {
 
     handleClickThanks = () =>{
-        console.log('back to playgrounds');
+        //console.log('back to playgrounds');
         this.props.history.push('/info');
     }
 

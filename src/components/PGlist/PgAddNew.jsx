@@ -47,6 +47,7 @@ class PgAddNew extends Component {
                 <textarea value={this.state.img_url} onChange={(event) => this.handleChangeFor(event, 'img_url')}></textarea>
                 <br/><br/><button type="submit">Submit!</button>
             </form>
+                <br/><p>https://www.northstpaul.org/ImageRepository/Document?documentID=3022</p>
                 {/* <input placeholder=""></input><button>SEARCH</button> */}
 
             </>

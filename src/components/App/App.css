@@ -94,3 +94,19 @@ input {
     border-bottom:1px solid #444; 
     cursor: pointer;
 }
+
+/* <div style="height:1000px;background-color:blue;font-size:30px"> */
+
+/* .parallax { */
+                     /* The image used */
+  /* background-image: url(pg1.jpg); */
+
+                      /* Set a specific height */
+  /* min-height: 500px;  */
+
+                      /* Create the parallax scrolling effect */
+  /* background-attachment: fixed; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+/* } */

@@ -31,6 +31,8 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
+        {/* <div class="parallax"> */}
+
           <Nav />
           <Switch>
             {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
@@ -79,10 +81,11 @@ class App extends Component {
               component={PgThanks} 
             />
             {/* If none of the other routes matched, we will show a 404. */}
-            <Route render={() => <h1>404 app</h1>} />
+            <Route render={() => <h1>404 in app</h1>} />
           </Switch>
           <Footer />
         </div>
+        {/* </div> */}
       </Router>
   )}
 }
