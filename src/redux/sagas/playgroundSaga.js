@@ -35,23 +35,11 @@ function* postPlayground(action) {
   }
 }
 
-// function* updatePlayground(action) {
-//   //let playground = {playground: action.payload}
-//   console.log('in update pg / pg saga');
-//   try {
-//       yield axios.post('/info', action.payload);  //action.payload, playground
-//       yield put ({type: 'FETCH_PG'});
-//       console.log('--- send this to server:'); // , playground
-//   } catch (error) {
-//       console.log('PG post request failed', error);
-//   }
-// }
-
 function* editPlayground(action) {
   // let id = action.payload;
   console.log('in edit PG', action.payload.id);
   try {
-    yield axios.put(`/info/${action.payload.id}`, action.payload); //   /playground/${description}   also had const response = 
+    yield axios.put(`/info/${action.payload.id}`, action.payload); // /playground/${description}   also had const response = 
                            // `/info/`            ////// /info/${action.payload.id}    , action.payload
     yield put({
       type: 'GET_PG'
@@ -74,7 +62,7 @@ function* deletePlayground(action) {
 }
 
 function* favePlayground(action) {
-
+  console.log('in fave PG', action.payload.id);
   try {
     yield axios.put(`/info/${action.payload}`, action.payload); //had ${}, /info/  , action.payload
     yield put({

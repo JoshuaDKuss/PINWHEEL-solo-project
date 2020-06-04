@@ -20,7 +20,7 @@ import PgItem from '../PgItem/PgItem';
 import PgThanks from '../PgThanks/PgThanks';
 import PgEdit from '../PgEdit/PgEdit';
 import PgAddNew from '../PgList/PgAddNew';
-//import PgChecklist from '../PgChecklist/PgChecklist';
+import PgChecklist from '../PgChecklist/PgChecklist';
 import './App.css';
 
 class App extends Component {
@@ -81,11 +81,11 @@ class App extends Component {
               path="/PgThanks"
               component={PgThanks} 
             />
-            {/* <ProtectedRoute
+            <ProtectedRoute
               exact
               path="/PgChecklist"
               component={PgChecklist} 
-            /> */}
+            />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404 in app</h1>} />
           </Switch>

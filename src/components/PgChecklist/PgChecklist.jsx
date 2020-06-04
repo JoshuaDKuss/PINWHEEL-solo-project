@@ -1,66 +1,93 @@
-//import React from 'react';
- 
-import { useChecklist } from 'react-checklist';
-// or const { useChecklist } = require('react-checklist');
+import React, { Component } from 'react';
+//import { connect } from 'react-redux';
+import './PgChecklist.css';
 
-const data = [
-    { _id: 1, label: 'item 1' },
-    { _id: 2, label: 'item 2' },
-    { _id: 3, label: 'item 3' },
-  ]
 
-  export default () => {
-    const { handleCheck, isCheckedAll, checkedItems } = useChecklist(data, {
-      key: '_id',
-      keyType: 'number',
-    });
-   
-    console.log(checkedItems);      // Set(0) - handling with Set
-    console.log([...checkedItems]); // []     - handling with Array
+class PgChecklist extends Component {
+  constructor (){ //props
+    super ();
+  }
+  render (){
     return (
-      <ul>
-   
-        <li>
-          <input
-            type="checkbox"
-            onChange={handleCheck}              // 1
-            checked={isCheckedAll}              // 2
-          />
-          <label>Check All</label>
-          </li>
- 
- {data.map((v, i) => (
-   <li key={i}>
-     <input
-       type="checkbox"
-       data-key={v._id}                  // 3
-       onChange={handleCheck}            // 4
-       checked={checkedItems.has(v._id)} // 5
-     />
-     <label>{v.label}</label>
-   </li>
- ))}
-
-</ul>
-);
-};
-
-export default () => {
-    const { setCheckedItems } = useChecklist(data);
-   
-    const handleReset = () => setCheckedItems(new Set());
-   
-    return (
-      <ul>
-   
-        <li>
-          <button onClick={handleReset}>
-            Reset
-          </button>
-        </li>
-   
-      </ul>
+      <div className="grid-container3">
+        <ItemList />
+        <br />
+        <br />
+        <br />
+        {/* <ItemCount count={allTheThings.length} /> */}
+        {/* <hr /> */}
+      </div>
     );
-  };
+  }
+}
 
-//export default PgChecklist;
+class Item extends React.Component {
+  constructor (){ // props
+    super ();
+
+    this.state = {
+      checked: false
+    };
+
+    this.handleClick = this.handleClick.bind(this);    
+  }
+  handleClick (e){
+    this.setState({
+      checked: !this.state.checked
+    });
+
+  }
+  render (){
+    let text = this.state.checked ? <strike>{this.props.message}</strike> : this.props.message;
+    return (
+        <div className="row">
+          <div className="col-md-12">
+            <input type="checkbox" onClick={this.handleClick} />&nbsp;{text}
+            <hr />
+          </div>
+        </div>
+    );
+  }
+}
+
+let item2 = <Item message="Water, drinks" />;
+let item3 = <Item message="Snacks" />;
+let item4 = <Item message="Wet Wipes / Hand Sanitizer" />;
+let item5 = <Item message="Toys, balls, kites" />;
+let item6 = <Item message="Sunscreen" />;
+let item7 = <Item message="Sunglasses" />;
+let item8 = <Item message="Swimsuits, Water shoes, towels" />;
+let item9 = <Item message="Diapers" />;
+
+let allTheThings = [item2, item3, item4, item5, item6, item7, item8, item9];
+class ItemList extends React.Component {
+  constructor (props){
+    super ();
+  }
+  render (){
+    let items = allTheThings.map(thing => thing);
+    return (
+        <h4>{items}</h4>
+    );
+  }
+}
+
+// class ItemCount extends React.Component {
+//   constructor (props){
+//     super ();
+//   }
+//   render (){
+//     return (
+//       <h4>There are {this.props.count} items on your list</h4>
+//     );
+//   }
+// }
+
+
+
+
+
+// let target = document.getElementById('app');
+// ReactDOM.render(<AppContainer />, target);
+
+export default PgChecklist;
