@@ -105,13 +105,7 @@ class PgList extends Component {
 } // end component
 
 
-              {/* <button id={playground.id} onClick={this.handleDetailClick}>DETAILS</button><br /> */}
-
-              {/* <div>{this.state.isEmptyState && <PgDetailsButton description={this.triggerDescriptionState} />}
-              {this.state.isDescriptionState 
-              // && <AnotherComponent />
-              }</div>
-              <PgDetailsButton description={this.triggerDescriptionState} /> */}
+           
 
 
 //export default PgList;
