@@ -6,7 +6,10 @@ body {
 }
 
 #description {
-  font-size: 10px;
+  font-size: 12px;
+  padding: 4px;
+  margin: 15px;
+  float: unset;
 }
 
 #addie{
@@ -46,6 +49,16 @@ textarea{
   text-shadow: 0 0 9px rgb(255, 67, 67), 0 0 5px rgb(128, 255, 105);
   /* text-shadow: 0 0 19px #FF0000, 0 0 5px #0000FF; */
 }
+
+/* #pg_list{
+  overflow: auto;
+} */
+
+#pg_list2{
+  overflow: auto;
+  height: 1400px;
+}
+
 .selector{
   float: left;
   margin: 5px;
@@ -62,13 +75,17 @@ textarea{
 #edit{
   float: right;
   border-radius: 18px 18px 18px 18px;
-  background-color: darkgoldenrod;
+  background-color: darkorange;
 }
 
 #favorite{
   border-radius: 18px 18px 18px 18px;
   background-color: rgb(92, 255, 92);
   height: 40px;
+}
+
+#favorite:active{
+  color: green;
 }
 
 #favorite:hover{

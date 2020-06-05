@@ -20,6 +20,10 @@ body {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(-360deg); } }
 
+.imageSpin1:hover{
+  animation:spin .3s linear infinite;
+}
+
 #log-button{
   background-color: orangered;
 }
@@ -47,13 +51,17 @@ body{
   .card {
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
     transition: 0.3s;
-    width: 90%;
+    width: 55%;
     border-radius: 10px;
-    background-color: rgb(161, 197, 219);
+    /* background-color: rgb(161, 197, 219); */
+    background-color: rgb(116, 199, 250);
     margin: 11px;
     text-align: center;
     /* opacity: 75%; */
     /* background-image: url(logo.png); */
+    margin-left: auto;
+    margin-right: auto;
+    float: unset;
   }
 
   .card:hover {
