@@ -29,12 +29,12 @@
 .imageSpinNav {
   position: static;
   float: left;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 30px;
+  margin-left: 140px;
   top: 50%;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   /* margin: 10px 0 0 -130px; */
   padding: 5px;
   -webkit-animation:spin 4.4s linear infinite;

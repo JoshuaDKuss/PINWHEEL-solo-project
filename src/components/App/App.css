@@ -24,6 +24,10 @@ body {
   animation:spin .3s linear infinite;
 }
 
+.imageSpin1:active {
+  animation:spin .1s linear infinite;
+}
+
 #log-button{
   background-color: orangered;
 }

@@ -74,11 +74,12 @@ class PgList extends Component {
         <PgListSearch />
         
         <div id="addPlayground" onClick={this.handleAddPgClick}><button id="addPgBtn">Add A Playground!</button></div>
-
+        <p id="biggie">P L A Y G R O U N D S</p>
         <div id="pg_list2">
           {/* className="card" id="large" */}
 
-          <br/><p id="biggie">P L A Y G R O U N D S</p><br />
+          {/* <br/><p id="biggie">P L A Y G R O U N D S</p> */}
+          <br />
           {/* style="overflow:scroll; height:400px;" */}
           <div id="pg_list">{this.props.reduxState.playground.map(
             (playground) => <div className="card" id="playground" key={playground.id}>
