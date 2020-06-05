@@ -23,6 +23,8 @@ body {
 
 #addPgBtn{
   border-radius: 18px 18px 18px 18px;
+  color: darkblue;
+  font-size: large;
   background-color: rgb(2, 253, 241);
   margin: 5px;
   padding: 5px;
@@ -63,6 +65,8 @@ textarea{
   float: left;
   margin: 5px;
   background-color: aquamarine;
+  border-radius: 18px 18px 18px 18px;
+  font-size: medium;
 }
 
 #delete{

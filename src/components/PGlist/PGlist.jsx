@@ -48,7 +48,7 @@ class PgList extends Component {
   handleImgClick = (id) => {
     console.log('handleImgClick', id);
     //this.props.dispatch({type:'PG_DETAIL', payload:this.props.playground});  // PG_DETAIL, fetch PG
-    this.props.history.push(`/PgItem/${id}`);
+    // this.props.history.push(`/PgItem/${id}`);
   }
 
   handleAddPgClick = () =>{
@@ -89,13 +89,7 @@ class PgList extends Component {
               <br/><img src={playground.img_url} alt="playground-img" onClick={() => this.handleImgClick(playground.id)}></img><br/>
               <p id="description">{playground.description}</p>
 
-              {/* <button id={playground.id} onClick={this.handleDetailClick}>DETAILS</button><br /> */}
 
-              {/* <div>{this.state.isEmptyState && <PgDetailsButton description={this.triggerDescriptionState} />}
-              {this.state.isDescriptionState 
-              // && <AnotherComponent />
-              }</div>
-              <PgDetailsButton description={this.triggerDescriptionState} /> */}
               
               <br/><button id="delete" onClick={() => this.deletePlayground(playground.id)}>delete</button>
               <button id="favorite" onClick={() => this.handleFavoriteClick(playground.id)}>FAVORITE</button>
@@ -110,6 +104,13 @@ class PgList extends Component {
 } // end component
 
 
+              {/* <button id={playground.id} onClick={this.handleDetailClick}>DETAILS</button><br /> */}
+
+              {/* <div>{this.state.isEmptyState && <PgDetailsButton description={this.triggerDescriptionState} />}
+              {this.state.isDescriptionState 
+              // && <AnotherComponent />
+              }</div>
+              <PgDetailsButton description={this.triggerDescriptionState} /> */}
 
 
 //export default PgList;
