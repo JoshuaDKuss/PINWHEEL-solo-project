@@ -9,7 +9,8 @@ import './Nav.css';
 // console.log(Logo);
 const Nav = (props) => (
   <div className="nav">
-    
+    <img class="imageSpinNav" src="https://bloximages.chicago2.vip.townnews.com/mtstandard.com/content/tncms/assets/v3/editorial/c/82/c82b41b7-15a8-57ab-b7a3-961607f7987f/55d3c70d3bd5e.image.png" 
+      alt="spin" width="320" height="320"></img>
    {/* <img src={logo} id="logo" alt="logo"></img> */}
     <Link to="/home">
     {/* <Link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'></Link> */}
