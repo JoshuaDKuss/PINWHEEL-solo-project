@@ -47,11 +47,11 @@ body{
     /* Add shadows to create the "card" effect */
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
     transition: 0.3s;
-    width: 80%;
+    width: 55%;
     border-radius: 10px;
     /* background-color: rgb(161, 197, 219); */
     background-color: rgb(174, 255, 174);
-    margin: 8px;
+    margin: 18px;
     padding: 5px;
     text-align: center;
     opacity: 90%;

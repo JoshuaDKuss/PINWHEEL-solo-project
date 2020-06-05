@@ -152,7 +152,18 @@ input {
 
 /* linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%) */
 
+#textareaDesc{
+  text-align: center;
+  max-width: 450px;
+  margin: 5px;
+  background-color: rgb(182, 226, 253);
+}
 
+#editPageImage{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
 
 /* <div style="height:1000px;background-color:blue;font-size:30px"> */
 

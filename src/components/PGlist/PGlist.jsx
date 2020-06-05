@@ -79,8 +79,9 @@ class PgList extends Component {
           {/* className="card" id="large" */}
 
           {/* <br/><p id="biggie">P L A Y G R O U N D S</p> */}
+
           <br />
-          {/* style="overflow:scroll; height:400px;" */}
+          
           <div id="pg_list">{this.props.reduxState.playground.map(
             (playground) => <div className="card" id="playground" key={playground.id}>
                                        {/* originally had id="item" */}
