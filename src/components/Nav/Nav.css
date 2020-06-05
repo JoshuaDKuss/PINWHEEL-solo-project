@@ -6,13 +6,14 @@
     color: orangered;
     padding: 2px;
     text-align: center;
+    margin-top: 5px;
     /* font-family: 'Bungee Shade';font-size: 42px; */
     /* font-family: @import url('https://fonts.googleapis.com/css?family=Bungee Shade&display-swap'); */
     
     border-radius: 24px 24px 24px 24px;
     font-family: Impact, Charcoal, sans-serif;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-size: 80px;
+    text-shadow: -1px 0 2px darkred,  0 2px 2px darkred, 3px 3px 2px darkred, 0 -1px 2px darkred;
+    font-size: 100px;
   }
 
 /* @import url('https://fonts.googleapis.com/css?family=Bungee Shade&display-swap'); */
@@ -29,8 +30,8 @@
 .imageSpinNav {
   position: static;
   float: left;
-  margin-top: 30px;
-  margin-left: 140px;
+  margin-top: 17px;
+  margin-left: 150px;
   top: 50%;
   left: 50%;
   width: 150px;
@@ -76,12 +77,12 @@ body{
 
 .nav-link {
   float: left;
-  color: orangered;
+  color: orange;
   /* background-color: lightskyblue; */
   text-align: center;
   padding: 15px 10px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
 
   /* these last two make the logout button in
   the nav bar look like another link */
@@ -89,6 +90,7 @@ body{
   cursor: pointer;
   outline:0;
   border-radius: 24px 24px 24px 24px;
+  text-shadow: -1px 0 1px darkred,  0 1px 1px darkred, 1px 1px 1px darkred, 0 -.5px 1px darkred;
 }
 
 .nav-link:hover {
