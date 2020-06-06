@@ -16,19 +16,6 @@ class PgList extends Component {
     description: ''
 }
 
-//  constructor(props) {
-//    super(props)
-//    this.state = { isEmptyState: true }
-// }
-
-// triggerDescriptionState = () => {
-//   this.setState({
-//     ...this.state,
-//     isEmptyState: false,
-//     isDescriptionState: true
-//   })
-// }
-
   componentDidMount() {
     console.log('PgList props:', this.props);
     this.props.dispatch({ type: 'FETCH_PG' }); // FETCH
@@ -73,7 +60,10 @@ class PgList extends Component {
       <>
         <PgListSearch />
         
-        <div id="addPlayground" onClick={this.handleAddPgClick}><button id="addPgBtn">Add A Playground!</button></div>
+        <div id="addPlayground" onClick={this.handleAddPgClick}>
+          <button id="addPgBtn">Add A Playground!</button>
+        </div>
+        {/* <div><button id="addPgBtn" onClick="https://www.google.com/maps">Google Maps</button></div> */}
         <p id="biggie">P L A Y G R O U N D S</p>
         <div id="pg_list2">
           {/* className="card" id="large" */}

@@ -14,13 +14,13 @@
     //     this.props.history.push('/details');
     // }
 
-    render() {
-        return (
-            <div className="card">
+    // render() {
+    //     return (
+    //         <div className="card">
                 {/* <p>{JSON.stringify(this.props.reduxState)}</p> */}
                 {/* <h4>YO</h4> */}
-                <ul>
-                        /////////////////                                
+                // <ul>
+                //         /////////////////                                
                 {/* {this.props.reduxState.playgroundReducer.map(playground =>
                     <li key={playground.id}>
                         <p>{playground.description}</p> */}
@@ -28,7 +28,7 @@
                     {/* </li> ) } */}
                         ///////////
                 {/* <button onClick <Details /> >edit</button> */}
-                </ul>
+                // </ul>
 
 
                 {/* <div className="pgName">{this.props.playground.pg_name}</div><br /> */}
@@ -45,9 +45,9 @@
                 {/* {this.props.reduxState.genres.map(genre => {return <div className="item4">{genre.name}</div>})}<br /> */}
                 {/* <p>{JSON.stringify(this.props.reduxState.genres.name, null, 2)}</p> */}
 
-            </div>
-        );
-    }
+    //         </div>
+    //     );
+    // }
 // }
 
 
