@@ -5,7 +5,12 @@ import { connect } from 'react-redux';
 class PgEdit extends Component {
     state = {
         pg_name: '',
-        description: ''   // ''
+        description: ''
+    }
+
+    componentDidMount(){
+        const prevName = this.props.match.params.id
+        console.log("edit pg name:", prevName);
     }
 
     handleClick = () => {
@@ -41,8 +46,8 @@ class PgEdit extends Component {
 
                 <div className="grid-container">
                     <div className='pg_name'>{this.props.reduxState.playground.pg_name}</div>
-                    <img id="editPageImage" className="pg_photo" value={this.props.reduxState.playground.id} alt="playground_image"
-                        onClick={this.handleClick} src={this.props.reduxState.playground.img_url} />
+                    {/* <img id="editPageImage" className="pg_photo" value={this.props.reduxState.playground.id} alt="playground_image" */}
+                        {/* onClick={this.handleClick} src={this.props.reduxState.playground.img_url} /> */}
                     <div className="desc">{this.props.reduxState.playground.description}</div>
 
 

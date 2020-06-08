@@ -5,6 +5,7 @@ import './PgList.css';
 //import PgDetailsButton from './PgDetailsButton';
 import PgListSearch from './PgListSearch';
 //import PgAddNew from './PgAddNew';
+// import Button from 'react-bootstrap/Button';
 
 
 class PgList extends Component {
@@ -17,20 +18,21 @@ class PgList extends Component {
 }
 
   componentDidMount() {
-    console.log('PgList props:', this.props);
+    //console.log('PgList props:', this.props);
     this.props.dispatch({ type: 'FETCH_PG' }); // FETCH
   }
 
   handleDetailClick = (event) => {
-    console.log('in HDC', event.target.id);
+    //console.log('in HDC', event.target.id);
   } //new route, query
 
   deletePlayground = (id) => {
     //alert('DELETE PLAYGROUND ....are you sure?');
-    console.log('clicked delete', id);
+    //console.log('clicked delete', id);
     this.props.dispatch({ type: 'DELETE_PG', payload: id });
     this.props.dispatch({ type: 'FETCH_PG' });
   }
+  
 
   handleImgClick = (id) => {
     console.log('handleImgClick', id);
@@ -39,7 +41,7 @@ class PgList extends Component {
   }
 
   handleAddPgClick = () =>{
-    console.log('handleAddPgClick');
+    //console.log('handleAddPgClick');
     this.props.history.push('/PgAddNew');
   }
 
@@ -49,7 +51,7 @@ class PgList extends Component {
   }
 
   editPlayground = (id) =>{
-    console.log('edit clicked', id);
+    //console.log('edit clicked', id);
 
     this.props.history.push(`/PgEdit/${id}`);
   }
@@ -63,28 +65,25 @@ class PgList extends Component {
         <div id="addPlayground" onClick={this.handleAddPgClick}>
           <button id="addPgBtn">Add A Playground!</button>
         </div>
-        {/* <div><button id="addPgBtn" onClick="https://www.google.com/maps">Google Maps</button></div> */}
+       
         <p id="biggie">P L A Y G R O U N D S</p>
-        <div id="pg_list2">
-          {/* className="card" id="large" */}
 
-          {/* <br/><p id="biggie">P L A Y G R O U N D S</p> */}
-
-          <br />
+        <div id="pg_list_overflow"><br/>
           
-          <div id="pg_list">{this.props.reduxState.playground.map(
-            (playground) => <div className="card" id="playground" key={playground.id}>
-                                       {/* originally had id="item" */}
-              <div id="pg_name">{playground.pg_name}</div>
+          <div>{this.props.reduxState.playground.map((playground) => 
+          <div className="card" id="playground" key={playground.id}>
+                                      
+              <p id="pg_name">{playground.pg_name}</p>
               <p id="oblique">{playground.address}</p>
-              <br/><img src={playground.img_url} alt="playground-img" onClick={() => this.handleImgClick(playground.id)}></img><br/>
-              <p id="description">{playground.description}</p>
+              <img src={playground.img_url} alt="playground-img" onClick={() => this.handleImgClick(playground.id)}></img>
 
-
-              
               <br/><button id="delete" onClick={() => this.deletePlayground(playground.id)}>delete</button>
-              <button id="favorite" onClick={() => this.handleFavoriteClick(playground.id)}>FAVORITE</button>
-              <button id="edit" onClick={() => this.editPlayground(playground.id)}>EDIT</button>
+              <button id="favorite" onClick={() => this.handleFavoriteClick(playground.id)}>favorite</button>
+              <button id="edit" onClick={() => this.editPlayground(playground.id)}>edit</button>
+              <br/>
+              <p id="description">{playground.description}</p>
+              
+              
             </div>
           )}</div>
 
@@ -96,10 +95,7 @@ class PgList extends Component {
 
 
            
-
-
-//export default PgList;
-//                      playground          reduxState.playground
 const mapStateToProps = (reduxState) => ({ reduxState })
 
 export default connect(mapStateToProps)(PgList);
+

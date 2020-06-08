@@ -1,151 +1,152 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px;
-    /* background-image: url(./images/pg1.jpg); */
-    /* text-align: center; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  /* background-image: url(./images/pg1.jpg); */
+  /* text-align: center; */
 }
 
 .imageSpin1 {
-  position: static;
-  top: 50%;
-  left: 50%;
-  width: 190px;
-  height: 190px;
-  margin: 10px 0 0 10px;
-  -webkit-animation:spin 1s linear infinite;
-  -moz-animation:spin 1s linear infinite;
-  animation:spin 1s linear infinite;
+position: static;
+top: 50%;
+left: 50%;
+width: 190px;
+height: 190px;
+margin: 10px 0 0 10px;
+-webkit-animation:spin 1s linear infinite;
+-moz-animation:spin 1s linear infinite;
+animation:spin 1s linear infinite;
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(-360deg); } }
 
 .imageSpin1:hover{
-  animation:spin .3s linear infinite;
+animation:spin .3s linear infinite;
 }
 
 .imageSpin1:active {
-  animation:spin .1s linear infinite;
+animation:spin .1s linear infinite;
 }
 
 #log-button{
-  background-color: orangered;
+background-color: orangered;
 }
 
 #log-button:hover {
-  background-color: rgb(247, 119, 73);
+background-color: rgb(247, 119, 73);
 }
 
 body{
-  margin: 7px;
-  /* color: orange; */
-  background-image: url(pg1.jpg);
-  /* background-repeat: no-repeat; */
-  background-size: 100%;
-  /* auto? */
-  text-align: center;
-  font-family: 'Verdana', serif;
+margin: 7px;
+/* color: orange; */
+background-image: url(pg1.jpg);
+/* background-repeat: no-repeat; */
+background-size: 100%;
+/* auto? */
+text-align: center;
+font-family: 'Verdana', serif;
 }
 
 /* .container{
-    background-image: url(pg1.jpg);
-    background-size: cover;
-  } */
+  background-image: url(pg1.jpg);
+  background-size: cover;
+} */
 
-  .card {
-    box-shadow: 0 9px 10px 0 rgba(0,0,0,0.7);
-    transition: 0.2s;
-    width: 31%;
-    border-radius: 10px;
-    /* background-color: rgb(161, 197, 219); */
-    background-color: rgb(116, 199, 250);
-    margin: 15px;
-    text-align: center;
-    /* opacity: 75%; */
-    /* background-image: url(logo.png); */
-    margin-left: 20px;
-    margin-right: 10px;
-    /* float: unset; */
-    margin-bottom: 10px;
-  }
+.card {
+  box-shadow: 0 9px 10px 0 rgba(0,0,0,0.7);
+  transition: 0.2s;
+  width: 31%;
+  height: 510px;
+  border-radius: 10px;
+  /* background-color: rgb(161, 197, 219); */
+  background-color: rgb(116, 199, 250);
+  margin: 15px;
+  text-align: center;
+  /* opacity: 75%; */
+  /* background-image: url(logo.png); */
+  margin-left: 20px;
+  margin-right: 10px;
+  /* float: unset; */
+  margin-bottom: 10px;
+}
 
-  .card:hover {
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
-    background-color: rgb(203, 248, 229);
-  }
+.card:hover {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  background-color: rgb(203, 248, 229);
+}
 
-  .container {
-    padding: 2px 16px;
-  }
+.container {
+  padding: 2px 16px;
+}
 
 .alert {
-    background-color: #ff4545;
-    margin: 50px;
+  background-color: #ff4545;
+  margin: 50px;
 }
 
 form {
-    background-color: lightskyblue;
-    width: 30%;
-    height: 250px;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 2px;
+  background-color: lightskyblue;
+  width: 30%;
+  height: 250px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 2px;
 }
 
 input {
-    margin: 5px;
-    margin-bottom: 10px;
+  margin: 5px;
+  margin-bottom: 10px;
 }
 
 .log-in, .log-out, .register {
-  background-color: #00acb0;
-  border-radius: 4px;
-  color: #f8f8f8;
-  min-height: 50px;
-  min-width: 100px;
-  outline:0;
-  cursor: pointer;
+background-color: #00acb0;
+border-radius: 4px;
+color: #f8f8f8;
+min-height: 50px;
+min-width: 100px;
+outline:0;
+cursor: pointer;
 }
 
 .log-in:hover, .log-out:hover, .register:hover {
-  background-color: #008183;
+background-color: #008183;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */
 .link-button {
-    background:none;
-    color:inherit;
-    border:none;
-    padding:0;
-    font: inherit;
-    outline:0;
-    border-bottom:1px solid #444; 
-    cursor: pointer;
+  background:none;
+  color:inherit;
+  border:none;
+  padding:0;
+  font: inherit;
+  outline:0;
+  border-bottom:1px solid #444; 
+  cursor: pointer;
 }
 
 
 .gradient-button {
-  margin: 10px;
-  font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 20px;
-  padding: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: #FFF;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  width: 200px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 25px;
+margin: 10px;
+font-family: "Arial Black", Gadget, sans-serif;
+font-size: 20px;
+padding: 15px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: #FFF;
+box-shadow: 0 0 20px #eee;
+border-radius: 10px;
+width: 200px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+cursor: pointer;
+display: inline-block;
+border-radius: 25px;
 }
 .gradient-button:hover{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  margin: 8px 10px 12px;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+margin: 8px 10px 12px;
 }
 .gradient-button-1 {background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)}
 .gradient-button-1:hover { background-position: right center; }
@@ -153,30 +154,31 @@ input {
 /* linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%) */
 
 #textareaDesc{
-  text-align: center;
-  max-width: 450px;
-  margin: 5px;
-  background-color: rgb(182, 226, 253);
+text-align: center;
+max-width: 450px;
+margin: 5px;
+background-color: rgb(182, 226, 253);
 }
 
 #editPageImage{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
 }
 
 /* <div style="height:1000px;background-color:blue;font-size:30px"> */
 
 /* .parallax { */
-                     /* The image used */
-  /* background-image: url(pg1.jpg); */
+                   /* The image used */
+/* background-image: url(pg1.jpg); */
 
-                      /* Set a specific height */
-  /* min-height: 500px;  */
+                    /* Set a specific height */
+/* min-height: 500px;  */
 
-                      /* Create the parallax scrolling effect */
-  /* background-attachment: fixed; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
+                    /* Create the parallax scrolling effect */
+/* background-attachment: fixed; */
+/* background-position: center; */
+/* background-repeat: no-repeat; */
+/* background-size: cover; */
 /* } */
+
