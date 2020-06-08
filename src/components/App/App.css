@@ -54,12 +54,16 @@ font-family: 'Verdana', serif;
 
 .card {
   box-shadow: 0 9px 10px 0 rgba(0,0,0,0.7);
-  transition: 0.2s;
+  transition: 0.14s;
   width: 31%;
   height: 510px;
   border-radius: 10px;
   /* background-color: rgb(161, 197, 219); */
-  background-color: rgb(116, 199, 250);
+  
+               /* background-color: rgb(116, 199, 250); */
+  /* background: rgb(238,174,202); */
+  background: linear-gradient(90deg, rgb(240, 190, 133) 0%, rgba(148,187,233,1) 100%);
+
   margin: 15px;
   text-align: center;
   /* opacity: 75%; */
@@ -72,7 +76,9 @@ font-family: 'Verdana', serif;
 
 .card:hover {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
-  background-color: rgb(203, 248, 229);
+  /* background: rgb(203, 248, 229); */
+  background: linear-gradient(90deg, rgba(148,187,233) 0%, rgb(203, 248, 229,1) 100%);
+  opacity: 99%;
 }
 
 .container {
