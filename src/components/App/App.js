@@ -19,7 +19,7 @@ import PgList from '../PgList/PgList';
 import PgItem from '../PgItem/PgItem';
 import PgThanks from '../PgThanks/PgThanks';
 import PgEdit from '../PgEdit/PgEdit';
-import PgAddNew from '../PgList/PgAddNew';
+import PgAddNew from '../PgAddNew/PgAddNew';
 import PgChecklist from '../PgChecklist/PgChecklist';
 import './App.css';
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './PgList.css';
 //import '../Details/Details';
 //import PgDetailsButton from './PgDetailsButton';
-import PgListSearch from './PgListSearch';
+import PgListSearch from '../PgFeatures/PgListSearch';
 //import PgAddNew from './PgAddNew';
 // import Button from 'react-bootstrap/Button';
 
